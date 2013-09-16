@@ -12,4 +12,4 @@ Redline is a website for Superintendents to enter change requests on plan revisi
 
 **Tony Chantharangsy**
 
-+ [http://github.com/fat](http://github.com/tek9iner)
++ [http://github.com/tek9iner](http://github.com/tek9iner)
