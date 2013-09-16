@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #d0cdc6;
+	height: 100%;
+}
+
+#topstrip {
+	height: 10px;
+	background-color: #000;
+}
+#logo {
+	height: 80px;
+	background-color: #46545f;
+	background-image:url(../logo.jpg);
+	background-repeat: no-repeat;
+	background-position: 10px 50%;
+}
+#pagefooter {
+	display:block;
+	margin: 0 auto 0 auto;
+	text-align:center;
+}
+
