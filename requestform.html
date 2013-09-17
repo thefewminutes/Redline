@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">MainVue Redlines</a>
+          <a class="navbar-brand" href="index.html">MainVue Redlines</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -45,16 +45,11 @@
     <h1>Redline Form</h1>
 	<form role="form">
     	<div class="row">
-        	<div class="col-md-4">
+        	<div class="col-md-6">
+            <p>Submit Date: <span id="submitDate"></span></p>
                 <div class="form-group">
                     <label for="SubmittedBy">Submitted by</label>
                     <input type="text" class="form-control" id="SubmittedBy" placeholder="Your Name" required>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="SubmitDate">Date</label>
-                    <input type="text" class="form-control" id="SubmitDate">
                 </div>
             </div>
         </div>
@@ -82,6 +77,54 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="RevDate">Plan Revision Date</label>
+                    <input type="text" class="form-control" id="RevDate" placeholder="Date" required>
+                </div>
+            </div>
+            <div class="col-md-2">
+            	<div class="form-group">
+                	<label for="plat-dd">Plat</label>
+                	<select class="form-control" id="plat-dd">
+                    	<option>plat 1</option>
+                        <option>plat 2</option>
+                        <option>plat 3</option>
+                        <option>plat 4</option>
+                    </select>
+                </div>
+        	</div>
+            <div class="col-md-2">
+            	<div class="form-group">
+                	<label for="lot-dd">Lot #</label>
+                	<select class="form-control" id="lot-dd">
+                    	<option>lot 1</option>
+                        <option>lot 2</option>
+                        <option>lot 3</option>
+                        <option>lot 4</option>
+                    </select>
+                </div>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6">
+            	<div class="form-group">
+                	<label for="redline-desc">Description of Correction</label>
+        			<textarea id="redline-desc" class="form-control" rows="3"></textarea>
+                    <span class="help-block">Please follow these directions that are pertinent to this control.</span>
+            	</div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6">
+            	<div class="form-group">
+                	<label for="file-upload">Attach File</label>
+        			<input type="file" id="file-upload" class="form-control">
+                    <span class="help-block">Please follow these directions that are pertinent to this control.</span>
+            	</div>
+            </div>
+        </div>
     </form>
 
     </div> <!-- /container -->
@@ -96,7 +139,14 @@
     <script type="text/javascript" src="bootstrap/js/jquery-ui.js"></script>
     <script type="text/javascript">
 		$(function() {
-			$("#SubmitDate").datepicker();
+			$("#RevDate").datepicker();
+			
+			var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+			var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+			var newDate = new Date();
+			newDate.setDate(newDate.getDate() + 1);    
+			$('#submitDate').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
 		});
 	</script>
   </body>

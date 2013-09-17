@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* CSS Document */
+/* main site styles */
 
 html, body {
 	margin: 0;
@@ -25,6 +25,7 @@ html, body {
 	margin: 0 auto 0 auto;
 	text-align:center;
 }
+/* end main site styles */
 
 /* top nav styles */
 .navbar-default {
@@ -44,4 +45,8 @@ html, body {
 .navbar-default .navbar-nav > li > a:hover {
     color: #fff;
 }
+.navbar-header > .navbar-brand:hover {
+	color: #fff;
+}
+/* end top nav styles */
 
