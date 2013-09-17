@@ -6,6 +6,7 @@ html, body {
 	padding: 0;
 	background-color: #d0cdc6;
 	height: 100%;
+	color: #000;
 }
 
 #topstrip {
@@ -23,5 +24,24 @@ html, body {
 	display:block;
 	margin: 0 auto 0 auto;
 	text-align:center;
+}
+
+/* top nav styles */
+.navbar-default {
+	background-color: #46545f;
+	border-color: #46545f;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #E7E7E7;
+    color: #46545f;
+}
+.navbar-default .navbar-brand {
+    color: #d0cbc5;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #d0cbc5;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
 }
 
