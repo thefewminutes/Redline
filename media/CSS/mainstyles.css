@@ -50,3 +50,11 @@ html, body {
 }
 /* end top nav styles */
 
+/* pretty input=file */
+#photoCover {
+	margin-bottom: 1em;
+}
+#lefile {
+	display: none;
+}
+

@@ -6,9 +6,8 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <title>Request Form</title>
-	
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="bootstrap/css/navbar.css" rel="stylesheet">
     <link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
 
@@ -109,20 +108,48 @@
         </div>
         <div class="row">
         	<div class="col-md-6">
-            	<div class="form-group">
-                	<label for="redline-desc">Description of Correction</label>
-        			<textarea id="redline-desc" class="form-control" rows="3"></textarea>
-                    <span class="help-block">Please follow these directions that are pertinent to this control.</span>
-            	</div>
+            	<hr>
             </div>
         </div>
         <div class="row">
         	<div class="col-md-6">
             	<div class="form-group">
-                	<label for="file-upload">Attach File</label>
-        			<input type="file" id="file-upload" class="form-control">
-                    <span class="help-block">Please follow these directions that are pertinent to this control.</span>
+                	<label for="redline-desc">Description of Correction</label>
+        			<textarea id="redline-desc" class="form-control" rows="3"></textarea>
+                    <span class="help-block">Please describe changes in detail.</span>
             	</div>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6">
+            	<hr>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-3">
+            	<div class="form-group">
+                	<label for="lefile">Upload Image</label>
+                	<input id="lefile" type="file">
+					<div class="input-append">
+						<input id="photoCover" class="form-control" type="text">
+						<a class="btn btn-primary" onclick="$('input[id=lefile]').click();">Browse</a>
+					</div>
+            	</div>
+            </div> 
+            <div class="col-md-3">
+            	<div class="form-group">
+                	<label>Files on Server</label>
+                	<ul class="list-group">
+                    	<li class="list-group-item"><a href="#">file1.jpg</a></li>
+                        <li class="list-group-item"><a href="#">file2.jpg</a></li>
+                        <li class="list-group-item"><a href="#">file3.jpg</a></li>
+                    </ul>
+            	</div>
+            </div> 
+        </div>
+        <div class="row">
+        	<div class="col-md-6">
+            	<hr>
             </div>
         </div>
     </form>
@@ -135,18 +162,26 @@
     </footer>
 
 	<script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 		$(function() {
-			$("#RevDate").datepicker();
+			$("#RevDate").datepicker(); // datepicker for revision date
 			
+			// date builder for grabbing current date
 			var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 			var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
 			var newDate = new Date();
 			newDate.setDate(newDate.getDate() + 1);    
 			$('#submitDate').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+			// end date builder
+			
+			// pretty file upload
+			$('input[id=lefile]').change(function() {
+				$('#photoCover').val($(this).val());
+			});
+			//end file upload
 		});
 	</script>
   </body>
