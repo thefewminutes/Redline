@@ -42,29 +42,13 @@
       </div>
 	
     <h1>Redline Form</h1>
+    <h3>Plan #1234567890</h3>
+    <h4>Revision 1/1/1970 (NULLABLE IF NO REVISION)</h4>
+    <p class="text-muted">Submitted by: Loggedin User | <a href="#">Search for another plan</a></p>
+    
 	<form role="form">
-    	<div class="row">
-        	<div class="col-md-6">
-            <p>Submit Date: <span id="submitDate"></span></p>
-                <div class="form-group">
-                    <label for="SubmittedBy">Submitted by</label>
-                    <input type="text" class="form-control" id="SubmittedBy" placeholder="Your Name" required>
-                </div>
-            </div>
-        </div>
         <div class="row">
-        	<div class="col-md-3">
-            	<div class="form-group">
-                	<label for="PlanName">Plan # or Name</label>
-                    <select class="form-control" id="PlanName">
-                    	<option>Plan 1</option>
-                        <option>Plan 2</option>
-                        <option>Plan 3</option>
-                        <option>Plan 4</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
             	<div class="form-group">
                 	<label for="ElevationName">Elevation # or Name</label>
                     <select class="form-control" id="ElevationName">
@@ -75,15 +59,7 @@
                     </select>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <div class="form-group">
-                    <label for="RevDate">Plan Revision Date</label>
-                    <input type="text" class="form-control" id="RevDate" placeholder="Date" required>
-                </div>
-            </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
             	<div class="form-group">
                 	<label for="plat-dd">Plat</label>
                 	<select class="form-control" id="plat-dd">
@@ -94,7 +70,7 @@
                     </select>
                 </div>
         	</div>
-            <div class="col-md-2">
+            <div class="col-md-4">
             	<div class="form-group">
                 	<label for="lot-dd">Lot #</label>
                 	<select class="form-control" id="lot-dd">
@@ -107,21 +83,21 @@
         	</div>
         </div>
         <div class="row">
-        	<div class="col-md-6">
+        	<div class="col-md-12">
             	<hr>
             </div>
         </div>
         <div class="row">
-        	<div class="col-md-6">
+        	<div class="col-md-12">
             	<div class="form-group">
                 	<label for="redline-desc">Description of Correction</label>
-        			<textarea id="redline-desc" class="form-control" rows="3"></textarea>
+        			<textarea id="redline-desc" class="form-control" rows="5"></textarea>
                     <span class="help-block">Please describe changes in detail.</span>
             	</div>
             </div>
         </div>
         <div class="row">
-        	<div class="col-md-6">
+        	<div class="col-md-12">
             	<hr>
             </div>
         </div>
@@ -133,6 +109,7 @@
 					<div class="input-append">
 						<input id="photoCover" class="form-control" type="text">
 						<a class="btn btn-primary" onclick="$('input[id=lefile]').click();">Browse</a>
+                        <button type="button" class="btn btn-md btn-primary" disabled="disabled">Upload</button>
 					</div>
             	</div>
             </div> 
@@ -140,16 +117,52 @@
             	<div class="form-group">
                 	<label>Files on Server</label>
                 	<ul class="list-group">
-                    	<li class="list-group-item"><a href="#">file1.jpg</a></li>
-                        <li class="list-group-item"><a href="#">file2.jpg</a></li>
-                        <li class="list-group-item"><a href="#">file3.jpg</a></li>
+                    	<li class="list-group-item"><a href="#" target="_blank">file1.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
+                        <li class="list-group-item"><a href="#" target="_blank">file2.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
+                        <li class="list-group-item"><a href="#" target="_blank">file3.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
                     </ul>
             	</div>
             </div> 
         </div>
         <div class="row">
-        	<div class="col-md-6">
+        	<div class="col-md-12">
             	<hr>
+            </div>
+        </div>
+        <h4>Set Approval Status</h4>
+        <div class="row">
+        	<div class="col-md-6">
+            	<div class="checkbox">
+                	<label>
+                    	<input type="checkbox"> Approved
+                    </label>
+                </div>
+                <div class="checkbox">
+                	<label>
+                    	<input type="checkbox"> Rejected
+                    </label>
+                </div>
+                <div class="form-group">
+                	<label for="reason">Reasoning</label>
+                    <textarea rows="2" class="form-control" id="reason"></textarea>
+                </div>    
+            </div>
+            <div class="col-md-6">
+            	<div class="checkbox">
+                	<label>
+                    	<input type="checkbox"> Cost Estimate Required
+                    </label>
+                </div>
+                <div class="checkbox">
+                	<label>
+                    	<input type="checkbox"> Design Approval Required
+                    </label>
+                </div>       
+            </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+        		<button type="button" class="btn btn-primary btn-block">Submit Redline</button>
             </div>
         </div>
     </form>

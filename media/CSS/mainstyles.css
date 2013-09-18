@@ -25,6 +25,9 @@ html, body {
 	margin: 0 auto 0 auto;
 	text-align:center;
 }
+.shadeDiv {
+	background-color: #fff;
+}
 /* end main site styles */
 
 /* top nav styles */
