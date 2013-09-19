@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <title>Request Form</title>
+    <title>Redline Request Form</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <link href="bootstrap/css/navbar.css" rel="stylesheet">
@@ -96,12 +96,12 @@
             	</div>
             </div>
         </div>
-        <div class="row">
+        <div class="row hidden-xs hidden-sm">
         	<div class="col-md-12">
             	<hr>
             </div>
         </div>
-        <div class="row">
+        <div class="row hidden-xs hidden-sm">
         	<div class="col-md-3">
             	<div class="form-group">
                 	<label for="lefile">Upload image</label>
@@ -137,7 +137,7 @@
         <div class="panel-body">
         	<div class="row">
             <div class="col-md-6">
-            <h4>Department approval required <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Pertinent department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+            <h4>Department approval required <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
             	<div class="checkbox">
                 	<label>
                     	<input type="checkbox"> Cost estimate required
@@ -190,29 +190,6 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
     <script type="text/javascript" src="bootstrap/js/popover.js"></script>
-    <script type="text/javascript">
-		$(function() {
-			$("#RevDate").datepicker(); // datepicker for revision date
-			
-			// date builder for grabbing current date
-			var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-			var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-
-			var newDate = new Date();
-			newDate.setDate(newDate.getDate() + 1);    
-			$('#submitDate').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
-			// end date builder
-			
-			// pretty file upload
-			$('input[id=lefile]').change(function() {
-				$('#photoCover').val($(this).val());
-			});
-			//end file upload
-			
-			//popovers
-			$('#approvalPopover').popover({trigger: 'hover'});
-			$('#deptApprovalPopover').popover({trigger: 'hover'});
-		});
-	</script>
+    <script type="text/javascript" src="media/js/requestform.js"></script>
   </body>
 </html>
