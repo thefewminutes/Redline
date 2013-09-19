@@ -1,195 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="shortcut icon" href="favicon.ico">
 
-    <title>Redline Request Form</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-    <link href="bootstrap/css/navbar.css" rel="stylesheet">
-    <link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
+    	<title>Redline Request Form</title>
+    	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    	<link href="bootstrap/css/navbar.css" rel="stylesheet">
+    	<link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="bootstrap/js/html5shiv.js"></script>
-      <script src="bootstrap/js/respond.min.js"></script>
-    <![endif]-->
-    
-  </head>
+    	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    	<!--[if lt IE 9]>
+      	<script src="bootstrap/js/html5shiv.js"></script>
+      	<script src="bootstrap/js/respond.min.js"></script>
+    	<![endif]-->
+	</head>
 
-  <body>
-    <div class="container">
-
-      <!-- Static navbar -->
-      <div class="navbar navbar-default">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">MainVue Redlines</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Dashboard</a></li>
-            <li class="active"><a href="#">New Redline</a></li>
-            <li><a href="#">Search</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+	<body>
+		<div class="container">
+      		<!-- Static navbar -->
+      		<div class="navbar navbar-default">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="index.html">MainVue Redlines</a>
+        		</div>
+				<div class="navbar-collapse collapse">
+          			<ul class="nav navbar-nav">
+            			<li><a href="#">Dashboard</a></li>
+            			<li class="active"><a href="#">New Redline</a></li>
+            			<li><a href="#">Search</a></li>
+          			</ul>
+        		</div>
+			</div>
 	
-    <h1>Redline Form</h1>
-    <h3>Plan #1234567890</h3>
-    <h4>Revision 1/1/1970</h4>
-    <p class="text-muted">Submitted by: Loggedin User | <a href="#">Search for another plan</a></p>
-    
-	<form role="form">
-        <div class="row">
-            <div class="col-md-4">
-            	<div class="form-group">
-                	<label for="ElevationName">Elevation # or name</label>
-                    <select class="form-control" id="ElevationName">
-                    	<option>Elevation 1</option>
-                        <option>Elevation 2</option>
-                        <option>Elevation 3</option>
-                        <option>Elevation 4</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-4">
-            	<div class="form-group">
-                	<label for="plat-dd">Plat</label>
-                	<select class="form-control" id="plat-dd">
-                    	<option>plat 1</option>
-                        <option>plat 2</option>
-                        <option>plat 3</option>
-                        <option>plat 4</option>
-                    </select>
-                </div>
-        	</div>
-            <div class="col-md-4">
-            	<div class="form-group">
-                	<label for="lot-dd">Lot #</label>
-                	<select class="form-control" id="lot-dd">
-                    	<option>lot 1</option>
-                        <option>lot 2</option>
-                        <option>lot 3</option>
-                        <option>lot 4</option>
-                    </select>
-                </div>
-        	</div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-            	<hr>
-            </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-6">
-            	<div class="form-group">
-                	<label for="redline-desc">Description of correction</label>
-        			<textarea id="redline-desc" class="form-control" rows="5"></textarea>
-                    <span class="help-block">Please describe changes in detail.</span>
-            	</div>
-            </div>
-            <div class="visible-xs visible-sm">
-            <p class="col-md-3 text-info">This device is not able to upload photos.</p>
-            </div>
-        	<div class="col-md-3 hidden-xs hidden-sm">
-            	<div class="form-group">
-                	<label for="lefile">Upload image</label>
-                	<input id="lefile" type="file">
-					<div class="input-append">
-						<input id="photoCover" class="form-control" type="text">
-						<a class="btn btn-primary" onclick="$('input[id=lefile]').click();">Browse</a>
-                        <button type="button" class="btn btn-md btn-primary" disabled="disabled">Upload</button>
-					</div>
-            	</div>
-            </div> 
-            <div class="col-md-3 hidden-xs hidden-sm">
-            	<div class="form-group">
-                	<label>Files on server</label>
-                	<ul class="list-group">
-                    	<li class="list-group-item"><a href="#" target="_blank">file1.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
-                        <li class="list-group-item"><a href="#" target="_blank">file2.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
-                        <li class="list-group-item"><a href="#" target="_blank">file3.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
-                    </ul>
-            	</div>
-            </div> 
-        <div class="row hidden-xs hidden-sm">
-        	<div class="col-md-12">
-            	<hr>
-            </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-            	<hr>
-            </div>
-        </div>
-        <!-- begin admin section -->
-        <div class="panel panel-default">
-        	<div class="panel-heading">
-            	<h3 class="panel-title">Administrators</h3>
-            </div>
-        <div class="panel-body">
-        	<div class="row">
-            <div class="col-md-6">
-            <h4>Department approval <abbr title="required">req'd</abbr> <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
-            	<div class="checkbox">
-                	<label>
-                    	<input type="checkbox"> Cost estimate required
-                    </label>
-                </div>
-                <div class="checkbox">
-                	<label>
-                    	<input type="checkbox"> Design approval required
-                    </label>
-                </div>       
-            </div>
-            <div class="col-md-6">
-            	<h4>Set redline approval status <a href="#" rel="popover" id="approvalPopover" data-original-title="Redline approval status" data-content="Mark approved to move redline to in-progress. Reject to move to closed. Requestor is notified of status and reason by email when you submit the form"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
-            	<div class="checkbox">
-                	<label>
-                    	<input type="checkbox"> Approved
-                    </label>
-                </div>
-                <div class="checkbox">
-                	<label>
-                    	<input type="checkbox"> Rejected
-                    </label>
-                </div>
-                <div class="form-group">
-                	<label for="reason">Reason</label>
-                    <textarea rows="2" class="form-control" id="reason"></textarea>
-                    <span class="help-block">Please enter the reason for rejection/approval</span>
-                </div>    
-            </div>
-        </div>
-        </div>
-        </div>
-        <!-- end admin section -->
-        <div class="row">
-        	<div class="col-md-12">
-        		<button type="button" class="btn btn-primary btn-block">Submit Redline</button>
-            </div>
-        </div>
-    </form>
+    		<h1>Redline Form</h1>
+    		<h3>Plan #1234567890</h3>
+    		<h4>Revision 1/1/1970</h4>
+    		<p class="text-muted">Submitted by: Loggedin User | <a href="#">Search for another plan</a></p>
+            <form role="form">
+    			<div class="panel panel-default">
+    				<div class="panel-heading">
+        				<h3 class="panel-title">Redline details</h3>
+        			</div>
+                    <div class="panel-body">
+                    	<div class="row">
+            				<div class="col-md-4">
+            					<div class="form-group">
+                                    <label for="ElevationName">Elevation # or name</label>
+                                    <select class="form-control" id="ElevationName">
+                                        <option>Elevation 1</option>
+                                        <option>Elevation 2</option>
+                                        <option>Elevation 3</option>
+                                        <option>Elevation 4</option>
+                                    </select>
+                				</div>
+            				</div>
+                        	<div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="plat-dd">Plat</label>
+                                    <select class="form-control" id="plat-dd">
+                                        <option>plat 1</option>
+                                        <option>plat 2</option>
+                                        <option>plat 3</option>
+                                        <option>plat 4</option>
+                                    </select>
+                                </div>
+                        	</div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="lot-dd">Lot #</label>
+                                    <select class="form-control" id="lot-dd">
+                                        <option>lot 1</option>
+                                        <option>lot 2</option>
+                                        <option>lot 3</option>
+                                        <option>lot 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+        			<div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="redline-desc">Description of correction</label>
+                                <textarea id="redline-desc" class="form-control" rows="5"></textarea>
+                                <span class="help-block">Please describe changes in detail.</span>
+                            </div>
+                        </div>
+                        <div class="visible-xs visible-sm">
+                            <p class="col-md-3 text-info">This device is not able to upload photos.</p>
+                        </div>
+                        <div class="col-md-3 hidden-xs hidden-sm">
+                            <div class="form-group">
+                                <label for="lefile">Upload image</label>
+                                <input id="lefile" type="file">
+                                <div class="input-append">
+                                    <input id="photoCover" class="form-control" type="text">
+                                    <a class="btn btn-primary" onclick="$('input[id=lefile]').click();">Browse</a>
+                                    <button type="button" class="btn btn-md btn-primary" disabled="disabled">Upload</button>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-3 hidden-xs hidden-sm">
+                            <div class="form-group">
+                                <label>Files on server</label>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="#" target="_blank">file1.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
+                                    <li class="list-group-item"><a href="#" target="_blank">file2.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
+                                    <li class="list-group-item"><a href="#" target="_blank">file3.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
+                                </ul>
+                            </div>
+                        </div>
+            		</div><!-- /row -->
+                </div><!-- /panel-container -->
+            </div><!-- /panel -->
 
-    </div> <!-- /container -->
-        <footer id="pagefooter">
-    	<div class="container">
-        	<p>Copyright &copy;2013 MainVue Homes | Need help? <a href="tel:+14257096526">Call</a> or <a href="mailto:Tony.Chantharangsy@mainvuehomes.com">email</a> the Webmaster.</p>
-        </div>
-    </footer>
+                <!-- begin admin section -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Administrators</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Department approval <abbr title="required">req'd</abbr> <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Cost estimate required
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Design approval required
+                                    </label>
+                                </div>
+                                <p><code>This section should be programmatically hidden after approval</code></p>      
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Set redline approval status <a href="#" rel="popover" id="approvalPopover" data-original-title="Redline approval status" data-content="Mark approved to move redline to in-progress. Reject to move to closed. Requestor is notified of status and reason by email when you submit the form"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Approved
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Rejected
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reason">Reason</label>
+                                    <textarea rows="2" class="form-control" id="reason"></textarea>
+                                    <span class="help-block">Please enter the reason for rejection/approval</span>
+                                    <p><code>This section should be programmatically hidden after approval</code></p>
+                                </div>    
+                            </div>
+                        </div>
+                    </div><!-- /panel-body -->
+                </div><!-- /panel-container -->
+                <!-- end admin section -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Edit</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Mark Complete</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Delete</button>
+                    </div>
+                </div>
+            </form>
+		</div>
+	</div>
+	<footer id="pagefooter">
+		<div class="container">
+			<p>Copyright &copy;2013 MainVue Homes | Need help? <a href="tel:+14257096526">Call</a> or <a href="mailto:Tony.Chantharangsy@mainvuehomes.com">email</a> the Webmaster.</p>
+		</div>
+	</footer>
 
-	<script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/jquery-ui.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
-    <script type="text/javascript" src="bootstrap/js/popover.js"></script>
-    <script type="text/javascript" src="media/js/requestform.js"></script>
-  </body>
+<script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/jquery-ui.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
+<script type="text/javascript" src="bootstrap/js/popover.js"></script>
+<script type="text/javascript" src="media/js/requestform.js"></script>
+	</body>
 </html>

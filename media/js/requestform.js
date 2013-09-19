@@ -1,6 +1,4 @@
 $(function() {
-	// datepicker for revision date
-	$("#RevDate").datepicker();
 			
 	// date builder for grabbing current date
 	var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
@@ -18,4 +16,5 @@ $(function() {
 	//popovers
 	$('#approvalPopover').popover({trigger: 'hover', placement: 'auto right'});
 	$('#deptApprovalPopover').popover({trigger: 'hover', placement: 'auto right'});
+	
 });
