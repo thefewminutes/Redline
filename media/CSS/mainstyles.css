@@ -61,3 +61,14 @@ html, body {
 	display: none;
 }
 
+/* popover  */
+.popover-title {
+	font-size: .8em;
+	font-weight: bold;
+}
+.popover-content {
+	font-size: .8em;
+	font-weight:normal;
+	line-height: 1.2em;
+}
+

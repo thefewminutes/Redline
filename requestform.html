@@ -43,14 +43,14 @@
 	
     <h1>Redline Form</h1>
     <h3>Plan #1234567890</h3>
-    <h4>Revision 1/1/1970 (NULLABLE IF NO REVISION)</h4>
+    <h4>Revision 1/1/1970</h4>
     <p class="text-muted">Submitted by: Loggedin User | <a href="#">Search for another plan</a></p>
     
 	<form role="form">
         <div class="row">
             <div class="col-md-4">
             	<div class="form-group">
-                	<label for="ElevationName">Elevation # or Name</label>
+                	<label for="ElevationName">Elevation # or name</label>
                     <select class="form-control" id="ElevationName">
                     	<option>Elevation 1</option>
                         <option>Elevation 2</option>
@@ -90,7 +90,7 @@
         <div class="row">
         	<div class="col-md-12">
             	<div class="form-group">
-                	<label for="redline-desc">Description of Correction</label>
+                	<label for="redline-desc">Description of correction</label>
         			<textarea id="redline-desc" class="form-control" rows="5"></textarea>
                     <span class="help-block">Please describe changes in detail.</span>
             	</div>
@@ -104,7 +104,7 @@
         <div class="row">
         	<div class="col-md-3">
             	<div class="form-group">
-                	<label for="lefile">Upload Image</label>
+                	<label for="lefile">Upload image</label>
                 	<input id="lefile" type="file">
 					<div class="input-append">
 						<input id="photoCover" class="form-control" type="text">
@@ -115,7 +115,7 @@
             </div> 
             <div class="col-md-3">
             	<div class="form-group">
-                	<label>Files on Server</label>
+                	<label>Files on server</label>
                 	<ul class="list-group">
                     	<li class="list-group-item"><a href="#" target="_blank">file1.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
                         <li class="list-group-item"><a href="#" target="_blank">file2.jpg</a><button type="button" class="close" aria-hidden="true">&times;</button></li>
@@ -129,9 +129,28 @@
             	<hr>
             </div>
         </div>
-        <h4>Set Approval Status</h4>
-        <div class="row">
-        	<div class="col-md-6">
+        <!-- begin admin section -->
+        <div class="panel panel-default">
+        	<div class="panel-heading">
+            	<h3 class="panel-title">Administrators</h3>
+            </div>
+        <div class="panel-body">
+        	<div class="row">
+            <div class="col-md-6">
+            <h4>Department approval required <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Pertinent department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+            	<div class="checkbox">
+                	<label>
+                    	<input type="checkbox"> Cost estimate required
+                    </label>
+                </div>
+                <div class="checkbox">
+                	<label>
+                    	<input type="checkbox"> Design approval required
+                    </label>
+                </div>       
+            </div>
+            <div class="col-md-6">
+            	<h4>Set redline approval status <a href="#" rel="popover" id="approvalPopover" data-original-title="Redline approval status" data-content="Mark approved to move redline to in-progress. Reject to move to closed. Requestor is notified of status and reason by email when you submit the form"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
             	<div class="checkbox">
                 	<label>
                     	<input type="checkbox"> Approved
@@ -143,23 +162,15 @@
                     </label>
                 </div>
                 <div class="form-group">
-                	<label for="reason">Reasoning</label>
+                	<label for="reason">Reason</label>
                     <textarea rows="2" class="form-control" id="reason"></textarea>
+                    <span class="help-block">Please enter the reason for rejection/approval</span>
                 </div>    
             </div>
-            <div class="col-md-6">
-            	<div class="checkbox">
-                	<label>
-                    	<input type="checkbox"> Cost Estimate Required
-                    </label>
-                </div>
-                <div class="checkbox">
-                	<label>
-                    	<input type="checkbox"> Design Approval Required
-                    </label>
-                </div>       
-            </div>
         </div>
+        </div>
+        </div>
+        <!-- end admin section -->
         <div class="row">
         	<div class="col-md-12">
         		<button type="button" class="btn btn-primary btn-block">Submit Redline</button>
@@ -170,13 +181,15 @@
     </div> <!-- /container -->
         <footer id="pagefooter">
     	<div class="container">
-        	<p>Copyright &copy;2013 MainVue Homes</p>
+        	<p>Copyright &copy;2013 MainVue Homes | Need help? <a href="tel:+14257096526">Call</a> or <a href="mailto:Tony.Chantharangsy@mainvuehomes.com">email</a> the Webmaster.</p>
         </div>
     </footer>
 
 	<script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/jquery-ui.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
+    <script type="text/javascript" src="bootstrap/js/popover.js"></script>
     <script type="text/javascript">
 		$(function() {
 			$("#RevDate").datepicker(); // datepicker for revision date
@@ -195,6 +208,10 @@
 				$('#photoCover').val($(this).val());
 			});
 			//end file upload
+			
+			//popovers
+			$('#approvalPopover').popover({trigger: 'hover'});
+			$('#deptApprovalPopover').popover({trigger: 'hover'});
 		});
 	</script>
   </body>
