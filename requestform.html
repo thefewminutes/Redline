@@ -88,21 +88,17 @@
             </div>
         </div>
         <div class="row">
-        	<div class="col-md-12">
+        	<div class="col-md-6">
             	<div class="form-group">
                 	<label for="redline-desc">Description of correction</label>
         			<textarea id="redline-desc" class="form-control" rows="5"></textarea>
                     <span class="help-block">Please describe changes in detail.</span>
             	</div>
             </div>
-        </div>
-        <div class="row hidden-xs hidden-sm">
-        	<div class="col-md-12">
-            	<hr>
+            <div class="visible-xs visible-sm">
+            <p class="col-md-3 text-info">This device is not able to upload photos.</p>
             </div>
-        </div>
-        <div class="row hidden-xs hidden-sm">
-        	<div class="col-md-3">
+        	<div class="col-md-3 hidden-xs hidden-sm">
             	<div class="form-group">
                 	<label for="lefile">Upload image</label>
                 	<input id="lefile" type="file">
@@ -113,7 +109,7 @@
 					</div>
             	</div>
             </div> 
-            <div class="col-md-3">
+            <div class="col-md-3 hidden-xs hidden-sm">
             	<div class="form-group">
                 	<label>Files on server</label>
                 	<ul class="list-group">
@@ -123,6 +119,10 @@
                     </ul>
             	</div>
             </div> 
+        <div class="row hidden-xs hidden-sm">
+        	<div class="col-md-12">
+            	<hr>
+            </div>
         </div>
         <div class="row">
         	<div class="col-md-12">
@@ -137,7 +137,7 @@
         <div class="panel-body">
         	<div class="row">
             <div class="col-md-6">
-            <h4>Department approval required <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+            <h4>Department approval <abbr title="required">req'd</abbr> <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
             	<div class="checkbox">
                 	<label>
                     	<input type="checkbox"> Cost estimate required

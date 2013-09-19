@@ -22,7 +22,7 @@ html, body {
 }
 #pagefooter {
 	display:block;
-	margin: 0 auto 0 auto;
+	margin: 1em auto 1em auto;
 	text-align:center;
 }
 .shadeDiv {
@@ -63,11 +63,11 @@ html, body {
 
 /* popover  */
 .popover-title {
-	font-size: .8em;
+	font-size: .6em;
 	font-weight: bold;
 }
 .popover-content {
-	font-size: .8em;
+	font-size: .6em;
 	font-weight:normal;
 	line-height: 1.2em;
 }
