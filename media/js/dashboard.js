@@ -33,6 +33,6 @@ $(document).ready(function() {
 		theme: 'jui',
 		headerTemplate: '{content} {icon}',
 		widgets: ['zebra','columns','uitheme'],
-		sortList: [[0,0]]
+		sortList: [[5,1]]
 	})
 });
