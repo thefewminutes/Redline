@@ -1,6 +1,8 @@
 $.expander.defaults.slicePoint = 60; // expander default value
 
 $(document).ready(function() {
+	
+	// tabs
 	$('#inprogress a').click(function (e) {
 		e.preventDefault()
 		$(this).tab('show')
@@ -24,5 +26,8 @@ $(document).ready(function() {
 		collapseTimer: 0,
 		userCollapseText: '[^]',
 		preserveWords: true
-	});
+	})
+	
+	// tablesorter plugins.jquery.com/tablesorter
+	$("#tbl-inProgress").tablesorter();
 });
