@@ -9,12 +9,14 @@
     	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" type="text/css" href="media/CSS/tablesorter/theme.jui.css">
+        <link rel="stylesheet" type="text/css" href="media/CSS/tablesorter/jquery.tablesorter.pager.css">
     	<link href="bootstrap/css/navbar.css" rel="stylesheet">
     	<link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
         
         <script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="media/js/jquery.tablesorter.js"></script>
         <script type="text/javascript" src="media/js/jquery.tablesorter.widgets.js"></script>
+        <script type="text/javascript" src="media/js/jquery.tablesorter.pager.js"></script>
     	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     	<!--[if lt IE 9]>
       	<script src="bootstrap/js/html5shiv.js"></script>
@@ -122,6 +124,25 @@
                             </tr>
                         </tbody>
                     </table>
+                    
+                    <!-- pager -->
+                    <div id="pager" class="pager">
+                    	<form>
+                        	<img src="media/CSS/tablesorter/icons/first.png" class="first">
+                            <img src="media/CSS/tablesorter/icons/prev.png" class="prev">
+                            <span class="pagedisplay"></span> <!-- this can be any element -->
+                            <img src="media/CSS/tablesorter/icons/next.png" class="next">
+                            <img src="media/CSS/tablesorter/icons/last.png" class="last">
+                            <select class="pagesize">
+                            	<option selected="selected" value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                            </select>
+                        </form>
+                    </div>
+                    <!-- /pager -->
+                    
                 </div><!-- /in progress tab content -->
                 <div class="tab-pane" id="pending"><!-- pending tab content -->
                 	<h2>Pending</h2>

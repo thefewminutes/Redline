@@ -35,4 +35,34 @@ $(document).ready(function() {
 		widgets: ['zebra','columns','uitheme'],
 		sortList: [[5,1]]
 	})
+	
+	// tablesorter pager
+	var pagerOptions = {
+		container: $(".pager"),
+		ajaxUrl: null, // use this url format "http:/mydatabase.com?page={page}&size={size}&{sortList:col}"
+		customAjaxUrl: function(table, url) { return url; },
+		ajaxProcessing: function(ajax){
+			if (ajax && ajax.hasOwnProperty('data')) {
+				return [ ajax.total_rows, ajax.data ];
+			}
+		},
+		output: '{startRow} to {endRow} ({totalRows})',
+		updateArrows: true,
+		page: 0,
+		size: 10,
+		fixedHeight: true,
+		removeRows: false,
+		
+		cssNext: '.next',
+		cssPrev: '.prev',
+		cssFirst: '.first',
+		cssLast: '.last',
+		cssGoto: '.gotoPage',
+		
+		cssPageDisplay: '.pageDisplay',
+		cssPageSize: '.pagesize',
+		cssDisabled: 'disabled',
+		cssErrorRow: 'tablesorter-errorRow'
+	};
+		
 });
