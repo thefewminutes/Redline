@@ -8,9 +8,13 @@
     	<title>Redline Dashboard</title>
     	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="media/CSS/tablesorter/theme.jui.css">
     	<link href="bootstrap/css/navbar.css" rel="stylesheet">
     	<link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
-
+        
+        <script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="media/js/jquery.tablesorter.js"></script>
+        <script type="text/javascript" src="media/js/jquery.tablesorter.widgets.js"></script>
     	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     	<!--[if lt IE 9]>
       	<script src="bootstrap/js/html5shiv.js"></script>
@@ -48,7 +52,7 @@
             <div class="tab-content">
             	<div class="tab-pane active" id="inprogress"><!-- in progress tab content -->
                 	<h2>In-progress</h2>
-                    <table id="tbl-inProgress" class="table table-striped table-hover table-responsive table-bordered tablesorter">
+                    <table id="tbl-inProgress" class="table table-responsive tablesorter">
                     	<thead>
                         	<tr>
                             	<th>Plan</th>
@@ -97,8 +101,16 @@
                                 <td>1234567890</td>
                                 <td>10-15-2013</td>
                                 <td> It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</td>
-                                <td>Methuselah Footfoot</td>
+                                <td>Fred Buyer</td>
+                                <td>09-23-2013</td>
+                            </tr>
+                            <tr>
+                                <td>003001</td>
+                                <td>1234567890</td>
                                 <td>10-15-2013</td>
+                                <td>Maecenas nec suscipit ligula. Nam lobortis ultricies libero elementum volutpat. Fusce id arcu pretium, semper diam id, mattis nulla. Sed feugiat elit eu euismod sodales.</td>
+                                <td>Mark Hamill</td>
+                                <td>10-01-2013</td>
                             </tr>
                         </tbody>
                     </table>
@@ -119,13 +131,12 @@
 		</div>
 	</footer>
 
-<script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/jquery-ui.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
 <script type="text/javascript" src="bootstrap/js/popover.js"></script>
 <script type="text/javascript" src="media/js/jquery.expander.js"></script>
 <script type="text/javascript" src="media/js/dashboard.js"></script>
-<script type="text/javascript" src="media/js/jquery.tablesorter.js"></script>
+
 	</body>
 </html>

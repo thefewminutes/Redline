@@ -29,5 +29,10 @@ $(document).ready(function() {
 	})
 	
 	// tablesorter plugins.jquery.com/tablesorter
-	$("#tbl-inProgress").tablesorter();
+	$("#tbl-inProgress").tablesorter({ 
+		theme: 'jui',
+		headerTemplate: '{content} {icon}',
+		widgets: ['zebra','columns','uitheme'],
+		sortList: [[0,0]]
+	})
 });
