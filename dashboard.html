@@ -47,8 +47,8 @@
             </ul>
             <div class="tab-content">
             	<div class="tab-pane active" id="inprogress"><!-- in progress tab content -->
-                	<h2>In-progress redlines</h2>
-                    <table class="table">
+                	<h2>In-progress</h2>
+                    <table class="table table-striped table-hover table-responsive table-bordered">
                     	<thead>
                         	<tr>
                             	<th>Plan</th>
@@ -59,7 +59,7 @@
                                 <th>Submit Date</th>
                         	</tr>
                     	</thead>
-                        <tbody>
+                        <tbody class="expandable">
                         	<tr>
                                 <td>1234567890</td>
                                 <td>1234567890</td>
@@ -103,8 +103,12 @@
                         </tbody>
                     </table>
                 </div><!-- /in progress tab content -->
-                <div class="tab-pane" id="pending">Pending</div>
-                <div class="tab-pane" id="closed">Closed</div>
+                <div class="tab-pane" id="pending"><!-- pending tab content -->
+                	<h2>Pending</h2>
+                </div><!-- /pending tab content -->
+                <div class="tab-pane" id="closed"><!-- closed tab content -->
+                	<h2>Closed</h2>
+                </div><!-- /closed tab content -->
             </div>
             
         </div><!-- /container -->
@@ -120,6 +124,8 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
 <script type="text/javascript" src="bootstrap/js/popover.js"></script>
+<script type="text/javascript" src="media/js/jquery.expander.js"></script>
 <script type="text/javascript" src="media/js/dashboard.js"></script>
+<script type="text-javascript" src="media/js/jquery.tablesorter.js"></script>
 	</body>
 </html>
