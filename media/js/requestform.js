@@ -25,4 +25,12 @@ $(function() {
 		alert("there is a problem with your form");
 	});
 	
+	$( "#cb_rejected" ).change(function() {
+		if(this.checked) {
+			$("#reason_window").slideDown();
+			return;
+		}
+		$("#reason_window").slideUp();
+	});
+	
 });

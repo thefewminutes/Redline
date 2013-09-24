@@ -151,15 +151,16 @@
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox"> Rejected
+                                        <input id="cb_rejected" type="checkbox" class="check"> Rejected
                                     </label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="reason">Reason</label>
-                                    <textarea rows="2" class="form-control" id="reason" required></textarea>
-                                    <span class="help-block">Please enter the reason for rejection</span>
-                                    <p><code>This section should be programmatically hidden after approval</code></p>
-                                </div>    
+                                <div id="reason_window">
+                                    <div class="form-group">
+                                        <label for="reason">Reason</label>
+                                        <textarea rows="2" class="form-control" id="reason" required></textarea>
+                                        <span class="help-block">Please enter the reason for rejection</span>
+                                    </div> 
+                                </div>   
                             </div>
                         </div>
                     </div><!-- /panel-body -->
@@ -181,7 +182,7 @@
                 </div>
             </form>
 		</div>
-	</div>
+	
 	<footer id="pagefooter">
 		<div class="container">
 			<p>Copyright &copy;2013 MainVue Homes | Need help? <a href="tel:+14257096526">Call</a> or <a href="mailto:Tony.Chantharangsy@mainvuehomes.com">email</a> the Webmaster.</p>

@@ -25,6 +25,9 @@ html, body {
 	margin: 1em auto 1em auto;
 	text-align:center;
 }
+#reason_window {
+	display:none;
+}
 
 /* top nav styles */
 .navbar-default {
