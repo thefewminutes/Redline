@@ -25,12 +25,18 @@ $(function() {
 		alert("there is a problem with your form");
 	});
 	
+	// hide/show reason field
 	$( "#cb_rejected" ).change(function() {
 		if(this.checked) {
 			$("#reason_window").slideDown();
 			return;
 		}
 		$("#reason_window").slideUp();
+	});
+	
+	// remove warning class on focus
+	$("#reason").focus(function(){
+  		$("#reason_window > div").removeClass("has-warning");
 	});
 	
 });
