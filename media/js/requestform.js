@@ -17,4 +17,12 @@ $(function() {
 	$('#approvalPopover').popover({trigger: 'hover', placement: 'auto right'});
 	$('#deptApprovalPopover').popover({trigger: 'hover', placement: 'auto right'});
 	
+	// form validation jquery.validationEngine plugin
+	$("#redlineForm").validationEngine();
+	//triggers when a form is validated with the result
+	$("#redlineForm").bind("jqv.form.result", function(event, errorFound) {
+		if(errorFound)
+		alert("there is a problem with your form");
+	});
+	
 });
