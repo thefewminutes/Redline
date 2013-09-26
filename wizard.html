@@ -46,7 +46,20 @@
 			</div>
             <!-- begin page content -->
             <h1>Redline Wizard</h1>
-            <p>Page Content</p>
+            <!-- tabs -->
+            <ul class="nav nav-tabs">
+            	<li class="active"><a href="#step1" data-toggle="tab">1. Search</a></li>
+                <li><a href="#step2" data-toggle="tab">2. Results</a></li>
+                <li><a href="#step3" data-toggle="tab">3. Enter Request</a></li>
+            </ul>
+            
+            <!-- tab content -->
+            <div class="tab-content">
+            	<!-- step 1 -->
+            	<div class="tab-pane active" id="step1"><p>step 1 content</p></div>
+                <div class="tab-pane" id="step2"><p>step 2 content</p></div>
+                <div class="tab-pane" id="step3"><p>step 3 content</p></div>
+            </div><!-- /tab content -->
             
         </div><!-- /container -->
         
@@ -61,6 +74,7 @@
 <script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
 <script type="text/javascript" src="bootstrap/js/popover.js"></script>
 <script type="text/javascript" src="media/js/jquery.expander.js"></script>
+<script type="text/javascript" src="media/js/wizard.js"></script>
 
 	</body>
 </html>
