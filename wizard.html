@@ -51,7 +51,7 @@
             <!-- tabs -->
             <ul class="nav nav-tabs">
             	<li class="active"><a href="#search" data-toggle="tab">Search</a></li>
-                <li><a href="#requestform" data-toggle="tab">Request Form</a></li>
+                <li><a id="requestTab" href="#requestform" data-toggle="tab">Request Form</a></li>
             </ul>
             
             <!-- tab content -->
@@ -68,8 +68,12 @@
                         	<label class="sr-only" for="inputRevisionDate">Revision date</label>
                             <input type="text" class="form-control input-lg" id="inputRevisionDate" placeholder="Revision date (optional)">
                         </div>
-                        <button id="btnSearch" type="submit" class="btn btn-primary btn-lg">Search</button>
+                        <button id="btnSearch" class="btn btn-primary btn-lg">Search</button>
                     </form></p>
+                    <div id="search_results">
+                    <h3>2. Results</h3>
+                    <p>Select plan from search results to add request</p>
+                    </div>
                 </div>
                 
                 <!-- request form -->
