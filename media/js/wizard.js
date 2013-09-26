@@ -15,5 +15,8 @@ $(document).ready(function() {
 	
 	// instantiate validator
 	$("#planSearch").validationEngine();
+	
+	// popover
+	$('#wizardPopover').popover({trigger: 'hover', placement: 'auto right'});
 
 })
