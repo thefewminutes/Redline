@@ -196,17 +196,27 @@
 <script type="text/javascript" src="media/js/jquery.validationEngine.js"></script>
 <script type="text/javascript" src="media/js/requestform.js"></script>
 <script type="text/javascript">
-	//files
-	var uploadedfiles={ "files" : [{"file1" : "http://www.mysite.com/file1.jpg","file2" : "http://www.mysite.com/file2.jpg","file3" : "http://www.mysite.com/file3.jpg","file4" : "http://www.mysite.com/file4.jpg"}] };
-	//loop through
-	var output="";
-	for(var key in uploadedfiles.files) {
-		if(uploadedfiles.files.hasOwnProperty(key)) {
-			output += '<li class="list-group-item">' + '<a href="' + uploadedfiles.files[key] + '" target="_blank">' + key + '</a>' + '<button type="button" class="close" aria-hidden="true">' + '&times;' + '</button>' + '</li>';
-		}
-	}
-	var update = document.getElementById('uploadfiles');
-	update.innerHTML = output;
+//files object
+var uploadedfiles = {
+    "files" : [
+    {"file1" : "http://www.mysite.com/file1.jpg"},
+    {"file2" : "http://www.mysite.com/file2.jpg"},
+    {"file3" : "http://www.mysite.com/file3.jpg"},
+    {"file4" : "http://www.mysite.com/file4.jpg"}
+    ] 
+};
+
+//loop
+var output="";
+for(var i=0; i<= uploadedfiles.files.length; i++) {
+	for (key in uploadedfiles.files[i]) {
+         if (uploadedfiles.files[i].hasOwnProperty(key)) {
+			output += '<li class="list-group-item"><a href="' + uploadedfiles.files[i][key] + '" target="_blank">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>';
+         } // has own property
+	} // for each array element
+} // for each object
+var update = document.getElementById('uploadfiles');
+update.innerHTML = output;
 </script>
 	</body>
 </html>
