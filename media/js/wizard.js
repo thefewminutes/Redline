@@ -1,17 +1,19 @@
 $(document).ready(function() {
 	// tabs
-	$('#step1 a').click(function (e) {
+	$('#inputPlan a').click(function (e) {
 		e.preventDefault()
 		$(this).tab('show')
 	})
 
-	$('#step2 a').click(function (e) {
+	$('#inputRevisionDate a').click(function (e) {
 		e.preventDefault()
 		$(this).tab('show')
 	})
+	
+	// datepicker
+	$("#inputRevisionDate").datepicker();
+	
+	// instantiate validator
+	$("#planSearch").validationEngine();
 
-	$('#step3 a').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
-	})
 })

@@ -28,6 +28,9 @@ html, body {
 #reason_window {
 	display:none;
 }
+#btnSearch {
+	margin-bottom:0;
+}
 
 /* top nav styles */
 .navbar-default {

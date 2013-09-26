@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="media/CSS/tablesorter/theme.jui.css">
         <link rel="stylesheet" type="text/css" href="media/CSS/tablesorter/jquery.tablesorter.pager.css">
     	<link href="bootstrap/css/navbar.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="media/CSS/validationEngine.jquery.css">
     	<link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
         
         <script type="text/javascript" src="media/js/jquery-1.10.2.min.js"></script>
@@ -48,17 +49,31 @@
             <h1>Redline Wizard</h1>
             <!-- tabs -->
             <ul class="nav nav-tabs">
-            	<li class="active"><a href="#step1" data-toggle="tab">1. Search</a></li>
-                <li><a href="#step2" data-toggle="tab">2. Results</a></li>
-                <li><a href="#step3" data-toggle="tab">3. Enter Request</a></li>
+            	<li class="active"><a href="#search" data-toggle="tab">Search</a></li>
+                <li><a href="#requestform" data-toggle="tab">Request Form</a></li>
             </ul>
             
             <!-- tab content -->
             <div class="tab-content">
-            	<!-- step 1 -->
-            	<div class="tab-pane active" id="step1"><p>step 1 content</p></div>
-                <div class="tab-pane" id="step2"><p>step 2 content</p></div>
-                <div class="tab-pane" id="step3"><p>step 3 content</p></div>
+            	<!-- search -->
+                <h3>1. Search</h3>
+            	<div class="tab-pane active" id="search">
+                	<p><form class="form-inline" role="form" id="planSearch">
+                    	<div class="form-group">
+                        	<label class="sr-only" for="inputPlan">Plan</label>
+                            <input type="text" class="form-control input-lg validate[required]" id="inputPlan" placeholder="Plan #/name">
+                        </div>
+                        <div class="form-group">
+                        	<label class="sr-only" for="inputRevisionDate">Revision date</label>
+                            <input type="text" class="form-control input-lg" id="inputRevisionDate" placeholder="Revision date (optional)">
+                        </div>
+                        <button id="btnSearch" type="submit" class="btn btn-primary btn-lg">Search</button>
+                    </form></p>
+                    <span class="help-block">Search for a plan, select from results, then enter your request.</span>
+                </div>
+                
+                <!-- request form -->
+                <div class="tab-pane" id="requestform"><p>request form</p></div>
             </div><!-- /tab content -->
             
         </div><!-- /container -->
@@ -74,6 +89,8 @@
 <script type="text/javascript" src="bootstrap/js/tooltip.js"></script>
 <script type="text/javascript" src="bootstrap/js/popover.js"></script>
 <script type="text/javascript" src="media/js/jquery.expander.js"></script>
+<script type="text/javascript" src="media/js/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="media/js/jquery.validationEngine.js"></script>
 <script type="text/javascript" src="media/js/wizard.js"></script>
 
 	</body>
