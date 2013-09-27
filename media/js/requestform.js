@@ -45,7 +45,7 @@ var output="";
 for(var i=0; i<= uploadedfiles.files.length; i++) {
 	for (key in uploadedfiles.files[i]) {
          if (uploadedfiles.files[i].hasOwnProperty(key)) {
-			output += '<li class="list-group-item"><a href="' + uploadedfiles.files[i][key] + '" target="_blank">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>';
+			output += '<li class="list-group-item"><a href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>';
          } // has own property
 	} // for each array element
 } // for each object
