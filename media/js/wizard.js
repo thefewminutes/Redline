@@ -31,7 +31,7 @@ $(document).ready(function() {
 	
 	// link to request form tab
 	$('.gotoForm').click(function() {
-		$('#wizardTabs a[href="#requestform"]').tab('show');
+		$('#wizardTabs a[href="#requestform"]').tab("show");
 		$('#requestTab').attr("data-toggle", "tab");
 		$('#requestTab').css("cursor", "auto");
 	});
