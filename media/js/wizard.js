@@ -35,5 +35,9 @@ $(document).ready(function() {
 		$('#requestTab').attr("data-toggle", "tab");
 		$('#requestTab').css("cursor", "auto");
 	});
+	
+	// logout tooltip
+	$('#logout').tooltip();
+
 
 })

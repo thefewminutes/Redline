@@ -35,5 +35,8 @@ $(document).ready(function() {
 		widgets: ['zebra','columns','uitheme'],
 		sortList: [[5,1]]
 	})
+	
+		// logout tooltip
+	$('#logout').tooltip();
 		
 });
