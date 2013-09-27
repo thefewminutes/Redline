@@ -25,8 +25,10 @@ $(document).ready(function() {
 	
 	// show search results
 	$("#planSearch").submit(function(event) {
-		$( "#search_results" ).show( "slow" );
-		return false;
+		if($("#inputPlan").val()){ // if there is a plan value in the input
+			$("#search_results").show( "slow" );
+			return false;
+		}
 	});
 	
 	// link to request form tab
@@ -46,6 +48,9 @@ $(document).ready(function() {
 	
 	// logout tooltip
 	$('#logout').tooltip();
+	
+	// set inputRevisionDate to cursor:auto
+	$('#inputRevisionDate').css("cursor", "auto");
 
 
 })
