@@ -47,7 +47,7 @@
             <p class="text-muted">(1) Search for a plan/revision, (2) select from results and (3) enter your request</p>
             <!-- tabs -->
             <ul class="nav nav-tabs" id="wizardTabs">
-            	<li class="active"><a href="#search" data-toggle="tab">Search</a></li>
+            	<li class="active"><a href="#search" data-toggle="tab" class="gotoSearch">Search</a></li>
                 <li><a id="requestTab" href="#requestform" data-toggle="tab">Request Form</a></li>
             </ul>
             
@@ -105,7 +105,7 @@
                 <div class="tab-pane" id="requestform">
     		<h2>Plan #3-40.02</h2>
     		<h3>Revision 9-15-2013</h3>
-    		<p class="text-muted">Submitted by: Loggedin User | <a href="#">Search for another plan</a></p>
+    		<p class="text-muted">Submitted by: Loggedin User | <a href="#" class="gotoSearch">Search for another plan</a></p>
             <form role="form" id="redlineForm">
     			<div class="panel panel-default">
     				<div class="panel-heading">
@@ -117,10 +117,11 @@
             					<div class="form-group">
                                     <label for="ElevationName">Elevation # or name</label>
                                     <select class="form-control" id="ElevationName">
-                                        <option>Elevation 1</option>
-                                        <option>Elevation 2</option>
-                                        <option>Elevation 3</option>
-                                        <option>Elevation 4</option>
+                                    	<option>-select-</option>
+                                        <option>F2</option>
+                                        <option>E</option>
+                                        <option>2L</option>
+                                        <option>P2</option>
                                     </select>
                 				</div>
             				</div>
@@ -128,6 +129,7 @@
                                 <div class="form-group">
                                     <label for="plat-dd">Plat</label>
                                     <select class="form-control" id="plat-dd">
+                                    	<option>-select-</option>
                                         <option>plat 1</option>
                                         <option>plat 2</option>
                                         <option>plat 3</option>
@@ -139,10 +141,11 @@
                                 <div class="form-group">
                                     <label for="lot-dd">Lot #</label>
                                     <select class="form-control" id="lot-dd">
-                                        <option>lot 1</option>
-                                        <option>lot 2</option>
-                                        <option>lot 3</option>
-                                        <option>lot 4</option>
+                                    	<option>-select-</option>
+                                        <option>BRG-305</option>
+                                        <option>BRG-358</option>
+                                        <option>BRG-371</option>
+                                        <option>EDG-104</option>
                                     </select>
                                 </div>
                             </div>

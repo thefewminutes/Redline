@@ -36,6 +36,14 @@ $(document).ready(function() {
 		$('#requestTab').css("cursor", "auto");
 	});
 	
+	// link to search tab
+	$('.gotoSearch').click(function() {
+		$('#wizardTabs a[href="#search"]').tab("show");
+		$('#requestTab').removeAttr("data-toggle");
+		$('#requestTab').css("cursor", "not-allowed");
+		$( "#search_results" ).hide();
+	});
+	
 	// logout tooltip
 	$('#logout').tooltip();
 
