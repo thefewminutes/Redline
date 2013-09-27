@@ -2,22 +2,6 @@ $.expander.defaults.slicePoint = 60; // expander default value
 
 $(document).ready(function() {
 	
-	// tabs
-	$('#inprogress a').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
-	})
-
-	$('#pending a').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
-	})
-
-	$('#closed a').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
-	})
-	
 	// Expander https://github.com/kswedberg/jquery-expander
 	$('tbody.expandable tr td').expander({
 		slicePoint: 80,
@@ -34,6 +18,34 @@ $(document).ready(function() {
 		headerTemplate: '{content} {icon}',
 		widgets: ['zebra','columns','uitheme'],
 		sortList: [[5,1]]
+	})
+		$("#tbl-Pending").tablesorter({ 
+		theme: 'jui',
+		headerTemplate: '{content} {icon}',
+		widgets: ['zebra','columns','uitheme'],
+		sortList: [[5,1]]
+	})
+		$("#tbl-Closed").tablesorter({ 
+		theme: 'jui',
+		headerTemplate: '{content} {icon}',
+		widgets: ['zebra','columns','uitheme'],
+		sortList: [[5,1]]
+	})
+	
+		// tabs
+	$('#inprogress a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+
+	$('#pending a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+
+	$('#closed a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
 	})
 	
 		// logout tooltip

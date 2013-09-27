@@ -23,9 +23,9 @@ $(document).ready(function() {
 	// instantiate validator
 	$("#planSearch").validationEngine();
 	
-	// show search results
+	// show search results pane
 	$("#planSearch").submit(function(event) {
-		if($("#inputPlan").val()){ // if there is a plan value in the input
+		if($("#inputPlan").val()){ // if there is a value in the plan input
 			$("#search_results").show( "slow" );
 			return false;
 		}
