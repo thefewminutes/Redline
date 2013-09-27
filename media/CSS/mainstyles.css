@@ -34,6 +34,9 @@ html, body {
 #search_results {
 	display:none;
 }
+#tblResults a{
+	display:block;
+}
 
 /* top nav styles */
 .navbar-default {
