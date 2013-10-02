@@ -4,7 +4,7 @@ $(document).ready(function() {
 	
 	// Expander https://github.com/kswedberg/jquery-expander
 	$('tbody.expandable tr td').expander({
-		slicePoint: 80,
+		slicePoint: 60,
 		expandPrefix: ' ',
 		expandText: '[...]',
 		collapseTimer: 0,
@@ -17,8 +17,8 @@ $(document).ready(function() {
 		theme: 'jui',
 		headerTemplate: '{content} {icon}',
 		widgets: ['zebra','columns','uitheme'],
-		sortList: [[5,1]],
-		headers: {6:{sorter:false}} // disable sorting on delete column
+		sortList: [[6,1]],
+		headers: {7:{sorter:false}} // disable sorting on delete column
 	})
 		$("#tbl-Pending").tablesorter({ 
 		theme: 'jui',
