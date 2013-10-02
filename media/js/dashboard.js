@@ -17,7 +17,8 @@ $(document).ready(function() {
 		theme: 'jui',
 		headerTemplate: '{content} {icon}',
 		widgets: ['zebra','columns','uitheme'],
-		sortList: [[5,1]]
+		sortList: [[5,1]],
+		headers: {6:{sorter:false}} // disable sorting on delete column
 	})
 		$("#tbl-Pending").tablesorter({ 
 		theme: 'jui',

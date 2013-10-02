@@ -47,6 +47,7 @@
             
             <h1>Redline Dashboard</h1>
             <p><a href="wizard.html" class="btn btn-primary btn-lg">New Redline</a></p>
+        <div id="redlineTabs">
             <ul class="nav nav-tabs" id="pagetabs">
             	<li class="active"><a href="#inprogress" data-toggle="tab">In Progress</a></li>
                 <li><a href="#pending" data-toggle="tab">Pending</a></li>
@@ -55,6 +56,7 @@
             <div class="tab-content">
             	<div class="tab-pane active" id="inprogress"><!-- in progress tab content -->
                 	<h2>In-progress</h2>
+                    <p class="text-muted">Click to edit or delete. Sort multiple columns simultaneously by holding down the shift key and clicking another column header.</p>
                     <div class="table-responsive">
                         <table id="tbl-inProgress" class="table tablesorter">
                             <thead>
@@ -65,6 +67,7 @@
                                     <th>Request</th>
                                     <th>Submitted by</th>
                                     <th>Submit Date</th>
+                                    <th>&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody class="expandable">
@@ -75,6 +78,7 @@
                                     <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</td>
                                     <td>Peter Farkenparker</td>
                                     <td>10-11-2013</td>
+                                    <td class="del_td"><button type="button" class="close" aria-hidden="true">&times;</button></td>
                                 </tr>
                                 <tr>
                                     <td>456264</td>
@@ -83,6 +87,7 @@
                                     <td>Contrary to popular belief, Lorem Ipsum is not simply random text.</td>
                                     <td>Smiley Joe</td>
                                     <td>10-12-2013</td>
+                                    <td class="del_td"><button type="button" class="close" aria-hidden="true">&times;</button></td>
                                 </tr>
                                 <tr>
                                     <td>789007</td>
@@ -91,6 +96,7 @@
                                     <td>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</td>
                                     <td>Frank Hammertoe</td>
                                     <td>10-12-2013</td>
+                                    <td class="del_td"><button type="button" class="close" aria-hidden="true">&times;</button></td>
                                 </tr>
                                 <tr>
                                     <td>834713</td>
@@ -99,6 +105,7 @@
                                     <td>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</td>
                                     <td>Methuselah Footfoot</td>
                                     <td>10-13-2013</td>
+                                    <td class="del_td"><button type="button" class="close" aria-hidden="true">&times;</button></td>
                                 </tr>
                                 <tr>
                                     <td>999000</td>
@@ -107,6 +114,7 @@
                                     <td> It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</td>
                                     <td>Fred Buyer</td>
                                     <td>09-23-2013</td>
+                                    <td class="del_td"><button type="button" class="close" aria-hidden="true">&times;</button></td>
                                 </tr>
                                 <tr>
                                     <td>003001</td>
@@ -115,6 +123,7 @@
                                     <td>Maecenas nec suscipit ligula. Nam lobortis ultricies libero elementum volutpat. Fusce id arcu pretium, semper diam id, mattis nulla. Sed feugiat elit eu euismod sodales.</td>
                                     <td>Mark Hamill</td>
                                     <td>10-01-2013</td>
+                                    <td class="del_td"><button type="button" class="close" aria-hidden="true">&times;</button></td>
                                 </tr>
                                 <tr>
                                     <td>056001</td>
@@ -123,6 +132,7 @@
                                     <td>Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.</td>
                                     <td>Captain Picard</td>
                                     <td>10-23-2013</td>
+                                    <td class="del_td"><button type="button" class="close" aria-hidden="true">&times;</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -297,7 +307,7 @@
                     </div>
                 </div><!-- /closed tab content -->
             </div>
-            
+        </div><!-- /#redlineTabs -->
         </div><!-- /container -->
         
 	<footer id="pagefooter">

@@ -37,6 +37,12 @@ html, body {
 #tblResults a{
 	display:block;
 }
+.del_td {
+	text-align:center;
+}
+td > button.close {
+	float:none;
+}
 
 /* top nav styles */
 .navbar-default {
