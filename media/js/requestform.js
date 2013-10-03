@@ -41,7 +41,7 @@ $(function() {
 	
 	//upload images section
 	//loop
-var output="";
+ var output="";
 for(var i=0; i<= uploadedfiles.files.length; i++) {
 	for (key in uploadedfiles.files[i]) {
          if (uploadedfiles.files[i].hasOwnProperty(key)) {
@@ -50,6 +50,20 @@ for(var i=0; i<= uploadedfiles.files.length; i++) {
 	} // for each array element
 } // for each object
 var update = document.getElementById('uploadfiles');
-update.innerHTML = output;
+update.innerHTML = output; 
+
+/* var output="";
+$.get("uploadfiles.json",function(data,status){
+	for(var i=0; i<= data.files.length; i++) {
+		for (key in data.files[i]) {
+			if (data.files[i].hasOwnProperty(key)) {
+				output += '<li class="list-group-item"><a href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>';
+			}
+		}
+	}
+})
+
+var update = document.getElementById('uploadfiles');
+update.innerHTML = output; */
 	
 });
