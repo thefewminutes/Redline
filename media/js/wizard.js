@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	// date builder for grabbing current date
 	var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-	var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+	var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 	var newDate = new Date();
 	newDate.setDate(newDate.getDate() + 1);    
 	$('#submitDate').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
@@ -35,21 +35,8 @@ $(document).ready(function() {
 	
 	// remove warning class on focus
 	$("#reason").focus(function(){
-  		$("#reason_window > div").removeClass("has-warning");
+		$("#reason_window > div").removeClass("has-warning");
 	});
-	
-	//upload images section
-	//loop
-	var output="";
-	for(var i=0; i<= uploadedfiles.files.length; i++) {
-		for (key in uploadedfiles.files[i]) {
-        	if (uploadedfiles.files[i].hasOwnProperty(key)) {
-				output += '<li class="list-group-item"><a href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>';
-         	} // has own property
-		} // for each array element
-	} // for each object
-	var update = document.getElementById('uploadfiles');
-	update.innerHTML = output;
 	
 	// turn off request tab on init
 	if($('#requestTab').attr('data-toggle')) {
@@ -59,14 +46,14 @@ $(document).ready(function() {
 	
 	// tabs
 	$('#inputPlan a').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
-	})
+		e.preventDefault();
+		$(this).tab('show');
+	});
 
 	$('#inputRevisionDate a').click(function (e) {
-		e.preventDefault()
-		$(this).tab('show')
-	})
+		e.preventDefault();
+		$(this).tab('show');
+	});
 	
 	// datepicker
 	$("#inputRevisionDate").datepicker();
@@ -87,6 +74,14 @@ $(document).ready(function() {
 		$('#wizardTabs a[href="#requestform"]').tab("show");
 		$('#requestTab').attr("data-toggle", "tab");
 		$('#requestTab').css("cursor", "auto");
+		// grab json file and populate file list
+		$.getJSON("uploadfiles2.json", function(data) {
+			var items = [];
+			$.each(data, function(key, val) {
+				items.push('<li class="list-group-item"><a href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>');
+			});
+			$( "<ul/>", {"class": "list-group",html: items.join( "" )}).appendTo( "#uploadfiles" ); // write list of upload files
+		});
 	});
 	
 	// link to search tab
@@ -104,4 +99,4 @@ $(document).ready(function() {
 	$('#inputRevisionDate').css("cursor", "auto");
 
 
-})
+});
