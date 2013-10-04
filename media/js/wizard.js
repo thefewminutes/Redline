@@ -74,15 +74,15 @@ $(document).ready(function() {
 		$('#wizardTabs a[href="#requestform"]').tab("show");
 		$('#requestTab').attr("data-toggle", "tab");
 		$('#requestTab').css("cursor", "auto");
-		// grab json file and populate file list
-		$.getJSON("uploadfiles2.json", function(data) {
-			var items = [];
-			$.each(data, function(key, val) {
-				items.push('<li class="list-group-item"><a href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>');
-			});
-			$( "<ul/>", {"class": "list-group",html: items.join( "" )}).appendTo( "#uploadfiles" ); // write list of upload files
-		});
-	});
+			// grab json file and populate file list
+			$.getJSON("uploadfiles2.json", function(data) {
+				var items = [];
+				$.each(data, function(key, val) {
+					items.push('<li class="list-group-item"><a href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>');
+				}); // loop through records
+				$( "<ul/>", {"class": "list-group",html: items.join( "" )}).appendTo( "#uploadfiles" ); // write list of upload files
+			}); // get Json
+	}); // click fn
 	
 	// link to search tab
 	$('.gotoSearch').click(function() {
