@@ -15,7 +15,6 @@
     	<link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
         
         <script src="media/js/jquery-1.10.2.min.js"></script>
-        <script src="media/js/typeahead.min.js"></script>
         
     	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     	<!--[if lt IE 9]>
@@ -61,7 +60,7 @@
                 	<p><form class="form-inline" role="form" id="planSearch">
                     	<div class="form-group">
                         	<label class="sr-only" for="inputPlan">Plan</label>
-                            <input type="text" class="form-control input-lg validate[required]" id="inputPlan" placeholder="Plan #/name">
+                            <input type="text" class="form-control input-lg validate[required] typeahead-plans" id="inputPlan" placeholder="Plan #/name">
                         </div>
                         <div class="form-group">
                         	<label class="sr-only" for="inputRevisionDate">Revision date</label>
@@ -282,6 +281,7 @@
 <script src="media/js/jquery.validationEngine.js"></script>
 <script src="bootstrap/js/tooltip.js"></script>
 <script src="bootstrap/js/popover.js"></script>
+<script src="media/js/typeahead.min.js"></script>
 <script src="media/js/wizard.js"></script>
 
 	</body>

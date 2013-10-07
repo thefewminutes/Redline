@@ -97,6 +97,12 @@ $(document).ready(function() {
 	
 	// set inputRevisionDate to cursor:auto
 	$('#inputRevisionDate').css("cursor", "auto");
+	
+	// typeahead
+	$('input.typeahead-plans').typeahead({
+  		name: 'accounts',
+  		local: ['1-20.02', '20-30.02', '11-40.02', '20-30.12', '19-30.02', '27-40.02', '26-40.02', '24-40.02', '8-30.02', '9-30.02', '3-30.02', '25-40.02', '6-40.18']
+	});
 
 
 });
