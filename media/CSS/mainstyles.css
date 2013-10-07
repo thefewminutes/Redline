@@ -135,6 +135,7 @@ td > button.close {
 .tt-suggestion {
   display: block;
   padding: 3px 20px;
+  font-size:18px;
 }
 
 .tt-suggestion.tt-is-under-cursor {
