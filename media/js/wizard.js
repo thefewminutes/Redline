@@ -108,10 +108,16 @@ $(document).ready(function() {
   		local: ['1-20', '20-30', '11-40', '20-30', '19-30', '27-40', '26-40', '24-40', '8-30', '9-30', '3-30', '25-40', '6-40']
 	});
 	
+	// delete uploaded files
 	$(document).delegate(".close","click", function(evt) {
 		evt.preventDefault();
-		$(this).parent().remove();
-		if(!$('ul.list-group').children().size() > 0 ) {
+		$('#confirmDelete').modal({ // launch confirm modal
+			backdrop: false,
+			keyboard: false
+		});
+		
+		$(this).parent().remove(); // remove the li item
+		if(!$('ul.list-group').children().size() > 0 ) { // if the last one is deleted show message
 			$('#uploadfiles').append('<p class="text-info">No files on server</p>');
 		};
 	});
