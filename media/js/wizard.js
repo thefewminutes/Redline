@@ -75,13 +75,15 @@ $(document).ready(function() {
 		$('#requestTab').attr("data-toggle", "tab");
 		$('#requestTab').css("cursor", "auto");
 		if(!$('ul.list-group').length){
+			$("#uploadfiles > p.text-info").remove();
 			// grab json file and populate file list
 			$.getJSON("uploadfiles2.json", function(data) {
 				var items = [];
 				$.each(data, function(key, val) {
-					items.push('<li class="list-group-item"><a href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>');
+					items.push('<li class="list-group-item"><a class="closer" href="#imageViewer" data-toggle="modal">' + key + '</a><button type="button" class="close" aria-hidden="true">&times;</button></li>');
 				}); // loop through records
 				$( "<ul/>", {"class": "list-group",html: items.join( "" )}).appendTo( "#uploadfiles" ); // write list of upload files
+				return;
 			}); // get Json
 		};
 	}); // click fn
@@ -104,6 +106,14 @@ $(document).ready(function() {
 	$('input.typeahead-plans').typeahead({
   		name: 'accounts',
   		local: ['1-20', '20-30', '11-40', '20-30', '19-30', '27-40', '26-40', '24-40', '8-30', '9-30', '3-30', '25-40', '6-40']
+	});
+	
+	$(document).delegate(".close","click", function(evt) {
+		evt.preventDefault();
+		$(this).parent().remove();
+		if(!$('ul.list-group').children().size() > 0 ) {
+			$('#uploadfiles').append('<p class="text-info">No files on server</p>');
+		};
 	});
 
 
