@@ -2,16 +2,6 @@ $.expander.defaults.slicePoint = 60; // expander default value
 
 $(document).ready(function() {
 	
-	// Expander https://github.com/kswedberg/jquery-expander
-	$('tbody.expandable tr td').expander({
-		slicePoint: 60,
-		expandPrefix: ' ',
-		expandText: '[...]',
-		collapseTimer: 0,
-		userCollapseText: '[^]',
-		preserveWords: true
-	});
-	
 	// initialize tablesorter (plugins.jquery.com/tablesorter)
 	/*
 	$("#tbl-inProgress").tablesorter({ 
@@ -62,7 +52,7 @@ $(document).ready(function() {
       // So a sortList = [[2,0],[3,0]] becomes "&col[2]=0&col[3]=0" in the url
       // and a filterList = [[2,Blue],[3,13]] becomes "&fcol[2]=Blue&fcol[3]=13" in the url
       //ajaxUrl : 'assets/City{page}.json#{filterList:filter}&{sortList:column}',
-		ajaxUrl : 'redlines.json',
+		ajaxUrl : 'redlines.json#{filterList:filter}&{sortList:column}',
       // modify the url after all processing has been applied
       customAjaxUrl: function(table, url) {
           // manipulate the url string as you desire
@@ -174,5 +164,15 @@ $(document).ready(function() {
 	
 		// logout tooltip
 	$('#logout').tooltip();
+	
+	// Expander https://github.com/kswedberg/jquery-expander
+	$('tbody.expandable tr td').expander({
+		slicePoint: 60,
+		expandPrefix: ' ',
+		expandText: '[...]',
+		collapseTimer: 0,
+		userCollapseText: '[^]',
+		preserveWords: true
+	});
 	
 });

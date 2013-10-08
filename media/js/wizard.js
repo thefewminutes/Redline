@@ -74,6 +74,7 @@ $(document).ready(function() {
 		$('#wizardTabs a[href="#requestform"]').tab("show");
 		$('#requestTab').attr("data-toggle", "tab");
 		$('#requestTab').css("cursor", "auto");
+		if(!$('ul.list-group').length){
 			// grab json file and populate file list
 			$.getJSON("uploadfiles2.json", function(data) {
 				var items = [];
@@ -82,6 +83,7 @@ $(document).ready(function() {
 				}); // loop through records
 				$( "<ul/>", {"class": "list-group",html: items.join( "" )}).appendTo( "#uploadfiles" ); // write list of upload files
 			}); // get Json
+		};
 	}); // click fn
 	
 	// link to search tab
