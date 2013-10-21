@@ -1,47 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-  
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.ico">
+<html ng-app="redlineApp" lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="shortcut icon" href="favicon.ico">
 
-    <title>MainVue Redlines</title>
+    	<title>Redline Dashboard</title>
+    	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="media/CSS/tablesorter/theme.jui.css">
+        <link rel="stylesheet" type="text/css" href="media/CSS/tablesorter/jquery.tablesorter.pager.css">
+    	<link href="bootstrap/css/navbar.css" rel="stylesheet">
+    	<link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
+        
+        <script src="media/js/jquery-1.10.2.min.js"></script>
+    	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    	<!--[if lt IE 9]>
+      	<script src="bootstrap/js/html5shiv.js"></script>
+      	<script src="bootstrap/js/respond.min.js"></script>
+    	<![endif]-->
+        <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+    	<script src="http://code.angularjs.org/1.2.0-rc.3/angular-route.min.js"></script>
+        <script src="media/js/redlines.js"></script>
+	</head>
+    
+	<body>
+		<div class="container">
+      		<!-- Static navbar -->
+      		<div class="navbar navbar-default">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+          			</button>
+          			<span class="navbar-brand"></span>
+        		</div>
+				<div class="navbar-collapse collapse">
+          			<ul class="nav navbar-nav">
+            			<li class="active"><a href="dashboard.html">Dashboard</a></li>
+            			<li><a href="wizard.html">Search</a></li>
+          			</ul>
+                    <p class="navbar-text pull-right">Signed in as <a href="index.html" id="logout" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="Click to logout" class="navbar-link">Logged In User</a></p>
+        		</div>
+			</div>
+            
+            <h1>Redline Dashboard</h1>
+            <p><a href="wizard.html" class="btn btn-primary btn-lg">New Redline</a></p>
+        	<div data-ng-view><!-- views placeholder -->
+            </div>
+        </div><!-- /container -->
+        
+        <!-- delete modal -->
+        <div class="modal fade" id="delViewer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    	<h4 class="modal-title">Delete redline?</h4>
+                    </div>
+                    <div class="modal-body">
+                    <h5 class="text-danger">Are you sure you would like to delete this redline?</h5>
+                    <p><strong>Plan:</strong> 432432</p>
+                    <p><strong>Submitted by:</strong> Loggedin User</p>
+                    <p><strong>Request:</strong> Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.</p>
+                    </div>
+                    <div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        				<button type="button" class="btn btn-danger">Delete</button>
+      				</div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /delete modal -->
+        
+	<footer id="pagefooter">
+		<div class="container">
+			<p>Copyright &copy;2013 MainVue Homes | Need help? <a href="tel:+14257096526">Call</a> or <a href="mailto:Tony.Chantharangsy@mainvuehomes.com">email</a> the Webmaster.</p>
+		</div>
+	</footer>
 
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="bootstrap/css/signin.css" rel="stylesheet" type="text/css">
-    <link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="bootstrap/js/html5shiv.js"></script>
-      <script src="bootstrap/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-	<div id="topstrip"></div>
-    <div id="logo"></div>
-    <div class="container">
-	<h1>Redlines</h1>
-      <form class="form-signin" action="dashboard.html">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="form-control" placeholder="Email address" autofocus>
-        <input type="password" class="form-control" placeholder="Password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-
-    </div> <!-- /container -->
-    <footer id="pagefooter">
-    	<div class="container">
-        	<p>Copyright &copy;2013 MainVue Homes</p>
-        </div>
-    </footer>
-
-<script src="media/js/jquery-1.10.2.min.js"></script>
+<script src="bootstrap/js/jquery-ui.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
+<script src="bootstrap/js/tooltip.js"></script>
+<script src="bootstrap/js/popover.js"></script>
+<script src="media/js/jquery.expander.js"></script>
+<script src="media/js/dashboardApp.js"></script>
+
+	</body>
 </html>
