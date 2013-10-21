@@ -1,13 +1,13 @@
 <div id="redlineTabs">
             <ul class="nav nav-tabs" id="pagetabs">
-            	<li class="active"><a href="#/" data-toggle="tab">In Progress</a></li>
-                <li><a href="#/pending" data-toggle="tab">Pending</a></li>
-                <li><a href="#/closed" data-toggle="tab">Closed</a></li>
+            	<li class="active"><a href="#" data-toggle="tab">In Progress</a></li>
+                <li><a href="#pending" data-toggle="tab">Pending</a></li>
+                <li><a href="#closed" data-toggle="tab">Closed</a></li>
             </ul>
             <div>
             	<div id="inprogress"><!-- in progress tab content -->
                 	<h2>In-progress</h2>
-                    <p class="text-muted">Click ID to approve, edit or mark complete. Sort multiple columns simultaneously by holding down the shift key and clicking another column header.</p>
+                    <p class="text-muted">Click ID to approve, edit or mark complete.</p>
                     <div class="table-responsive">
                     <!-- pager -->
                     <ul class="pagination pagination-sm">
@@ -29,76 +29,42 @@
                                     <th>Submit Date</th>
                                     <th>&nbsp;</th>
                                 </tr>
+                                <tr>
+                            		<td>
+                            			&nbsp;
+                            		</td>
+                            		<td>
+                            			<input ng-model="id" class="form-control input-sm" type="search">
+                            		</td>
+                            		<td>
+                            			<input class="form-control input-sm" type="search">
+                            		</td>
+                                    <td>
+                            			<input class="form-control input-sm" type="search">
+                            		</td>
+                                    <td>
+                            			&nbsp;
+                            		</td>
+                                    <td>
+                            			<input class="form-control input-sm" type="search">
+                            		</td>
+                                    <td>
+                            			<input class="form-control input-sm" type="search">
+                            		</td>
+                                    <td>
+                            			&nbsp;
+                            		</td>
+                        		</tr>
                             </thead>
                             <tbody class="expandable">
-                                <tr>
-                                    <td><a class="btn-sm btn-primary" href="#">12</a></td>
-                                    <td>123784</td>
-                                    <td>1234567890</td>
-                                    <td>10-11-2013</td>
-                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</td>
-                                    <td>Peter Farkenparker</td>
-                                    <td>10-11-2013</td>
-                                    <td class="del_td"><button type="button" class="close" aria-hidden="true" data-toggle="modal" data-target="#delViewer">&times;</button></td>
-                                </tr>
-                                <tr>
-                                    <td><a class="btn-sm btn-primary" href="#">94</a></td>
-                                    <td>456264</td>
-                                    <td>1234567890</td>
-                                    <td>10-12-2013</td>
-                                    <td>Contrary to popular belief, Lorem Ipsum is not simply random text.</td>
-                                    <td>Smiley Joe</td>
-                                    <td>10-12-2013</td>
-                                    <td class="del_td"><button type="button" class="close" aria-hidden="true" data-toggle="modal" data-target="#delViewer">&times;</button></td>
-                                </tr>
-                                <tr>
-                                    <td><a class="btn-sm btn-primary" href="#">13</a></td>
-                                    <td>789007</td>
-                                    <td>1234567890</td>
-                                    <td>10-13-2013</td>
-                                    <td>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</td>
-                                    <td>Frank Hammertoe</td>
-                                    <td>10-12-2013</td>
-                                    <td class="del_td"><button type="button" class="close" aria-hidden="true" data-toggle="modal" data-target="#delViewer">&times;</button></td>
-                                </tr>
-                                <tr>
-                                    <td><a class="btn-sm btn-primary" href="#">20</a></td>
-                                    <td>834713</td>
-                                    <td>1234567890</td>
-                                    <td>10-14-2013</td>
-                                    <td>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</td>
-                                    <td>Methuselah Footfoot</td>
-                                    <td>10-13-2013</td>
-                                    <td class="del_td"><button type="button" class="close" aria-hidden="true" data-toggle="modal" data-target="#delViewer">&times;</button></td>
-                                </tr>
-                                <tr>
-                                    <td><a class="btn-sm btn-primary" href="#">34</a></td>
-                                    <td>999000</td>
-                                    <td>1234567890</td>
-                                    <td>10-15-2013</td>
-                                    <td> It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</td>
-                                    <td>Fred Buyer</td>
-                                    <td>09-23-2013</td>
-                                    <td class="del_td"><button type="button" class="close" aria-hidden="true" data-toggle="modal" data-target="#delViewer">&times;</button></td>
-                                </tr>
-                                <tr>
-                                    <td><a class="btn-sm btn-primary" href="#">35</a></td>
-                                    <td>003001</td>
-                                    <td>1234567890</td>
-                                    <td>10-15-2013</td>
-                                    <td>Maecenas nec suscipit ligula. Nam lobortis ultricies libero elementum volutpat. Fusce id arcu pretium, semper diam id, mattis nulla. Sed feugiat elit eu euismod sodales.</td>
-                                    <td>Mark Hamill</td>
-                                    <td>10-01-2013</td>
-                                    <td class="del_td"><button type="button" class="close" aria-hidden="true" data-toggle="modal" data-target="#delViewer">&times;</button></td>
-                                </tr>
-                                <tr>
-                                    <td><a class="btn-sm btn-primary" href="#">36</a></td>
-                                    <td>056001</td>
-                                    <td>1234567890</td>
-                                    <td>08-13-2013</td>
-                                    <td>Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.</td>
-                                    <td>Captain Picard</td>
-                                    <td>10-23-2013</td>
+                                <tr ng-repeat="redline in redlines.content.redlines">
+                                    <td><a class="btn-sm btn-primary" href="#">{{redline.redlineId}}</a></td>
+                                    <td>{{redline.plan}}</td>
+                                    <td>{{redline.elevation}}</td>
+                                    <td size="10">{{redline.revisionDate}}</td>
+                                    <td>{{redline.request}}</td>
+                                    <td>{{redline.userId}}</td>
+                                    <td size="10">{{redline.submitDate}}</td>
                                     <td class="del_td"><button type="button" class="close" aria-hidden="true" data-toggle="modal" data-target="#delViewer">&times;</button></td>
                                 </tr>
                             </tbody>

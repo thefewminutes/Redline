@@ -24,7 +24,7 @@ redlineApp.config(function($routeProvider) {
 // get all the redlines
 redlineApp.factory('redlineFactory', function($http) {
 	var redlines = {content:null};
-	$http.get('json/redlines.json').success(function(data) {
+	$http.get('media/json/redlines.json').success(function(data) {
 		redlines.content = data;
 	});
 	var factory = {};
