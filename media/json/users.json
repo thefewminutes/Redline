@@ -12,7 +12,7 @@
 		"lastName": "Danson",
 		"email": "ted.danson@mainvuehomes.com",
 		"password": "letmein",
-		"role": 2 // qualified user that can enter redlines
+		"role": 2 // qualified user that can add redlines
 	}, {
 		"userId": 3,
 		"firstName": "Red",
