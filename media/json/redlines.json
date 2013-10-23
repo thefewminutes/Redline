@@ -78,6 +78,19 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3
+  }, {
+	"redlineId": 7,
+	"userId": 1,
+	"submitDate": "10-15-2013",
+    "plan": "4-34",
+	"revisionDate": "2-13-2013",
+    "elevation": "F",
+	"plat": "KDR",
+	"lot": "10",
+    "request": "Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 1
   }]
   
 }
