@@ -83,9 +83,11 @@ controllers.inprogressController = function ($scope, inprogressFactory) {
 		$scope.redlines = inprogressFactory.getRedlines();
 	}
 	// delete redline
-	$scope.deleteRedline = function (index) {
-    	//$scope.redlines.content.redlines.splice(index, 1)
-		alert(index);
+	$scope.deleteRedline = function (item) {
+		var index = $scope.redlines.content.redlines.indexOf(item);
+    	if (index != -1) {
+        	$scope.redlines.content.redlines.splice(index, 1);
+    	} 
 	};
 
 };
@@ -98,9 +100,11 @@ controllers.pendingController = function ($scope, pendingFactory) {
 		$scope.redlines = pendingFactory.getRedlines();
 	}
 	// delete redline
-	$scope.deleteRedline = function (index) {
-    	//$scope.redlines.content.redlines.splice(index, 1)
-		alert(index);
+	$scope.deleteRedline = function (item) {
+		var index = $scope.redlines.content.redlines.indexOf(item);
+    	if (index != -1) {
+        	$scope.redlines.content.redlines.splice(index, 1);
+    	} 
 	};
 
 };
@@ -113,9 +117,11 @@ controllers.closedController = function ($scope, closedFactory) {
 		$scope.redlines = closedFactory.getRedlines();
 	}
 	// delete redline
-	$scope.deleteRedline = function (index) {
-    	//$scope.redlines.content.redlines.splice(index, 1)
-		alert(index);
+	$scope.deleteRedline = function (item) {
+		var index = $scope.redlines.content.redlines.indexOf(item);
+    	if (index != -1) {
+        	$scope.redlines.content.redlines.splice(index, 1);
+    	} 
 	};
 
 };

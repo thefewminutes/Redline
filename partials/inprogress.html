@@ -9,6 +9,7 @@
             <h2>In-progress</h2>
             <p class="text-muted">Click ID to approve, edit or mark complete.</p>
             <div class="table-responsive">
+            <input ng-model="search" class="form-control input-sm" type="search" placeholder="Search">
                 <!-- pager -->
                 <ul class="pagination pagination-sm">
                     <li class="disabled"><a href="#">&laquo;</a></li>
@@ -29,32 +30,9 @@
                             <th>Submit Date</th>
                             <th>&nbsp;</th>
                         </tr>
-                        <tr>
-                            <td>&nbsp;
-                            </td>
-                            <td>
-                                <input ng-model="id" class="form-control input-sm" type="search">
-                            </td>
-                            <td>
-                                <input class="form-control input-sm" type="search">
-                            </td>
-                            <td>
-                                <input class="form-control input-sm" type="search">
-                            </td>
-                            <td>&nbsp;
-                            </td>
-                            <td>
-                                <input class="form-control input-sm" type="search">
-                            </td>
-                            <td>
-                                <input class="form-control input-sm" type="search">
-                            </td>
-                            <td>&nbsp;
-                            </td>
-                        </tr>
                     </thead>
                     <tbody class="expandable">
-                        <tr ng-repeat="redline in redlines.content.redlines | filter:{status:'1'}">
+                        <tr ng-repeat="redline in redlines.content.redlines | filter:{status:'1'} | filter:search">
                             <td><a class="btn-sm btn-primary" href="#">{{redline.redlineId}}</a></td>
                             <td>{{redline.plan}}</td>
                             <td>{{redline.elevation}}</td>
@@ -62,7 +40,7 @@
                             <td>{{redline.request}}</td>
                             <td>{{redline.userId}}</td>
                             <td size="10">{{redline.submitDate}}</td>
-                            <td class="del_td"><button type="button" class="close" aria-hidden="true" ng-click="deleteRedline($index)">&times;</button></td>
+                            <td class="del_td"><button type="button" class="close" aria-hidden="true" ng-click="deleteRedline(redline)">&times;</button></td>
                         </tr>
                     </tbody>
                 </table>
