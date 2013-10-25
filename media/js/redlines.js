@@ -24,7 +24,7 @@ redlineApp.config(function($routeProvider) {
 // get all the in progress redlines
 redlineApp.factory('inprogressFactory', function($http) {
 	var redlines = {content:null};
-	$http.get('media/json/redlines.json')
+	$http.get('media/json/inprogress.json')
 		.success(function(data) {
 			redlines.content = data;
 	})
@@ -41,7 +41,7 @@ redlineApp.factory('inprogressFactory', function($http) {
 // get all the pending redlines
 redlineApp.factory('pendingFactory', function($http) {
 	var redlines = {content:null};
-	$http.get('media/json/redlines.json')
+	$http.get('media/json/pending.json')
 		.success(function(data) {
 			redlines.content = data;
 	})
@@ -58,7 +58,7 @@ redlineApp.factory('pendingFactory', function($http) {
 // get all the closed redlines
 redlineApp.factory('closedFactory', function($http) {
 	var redlines = {content:null};
-	$http.get('media/json/redlines.json')
+	$http.get('media/json/closed.json')
 		.success(function(data) {
 			redlines.content = data;
 	})

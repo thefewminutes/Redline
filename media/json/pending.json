@@ -1,0 +1,96 @@
+{
+
+  "redlines" : [{
+    "redlineId": 1,
+	"userId": 1,
+	"submitDate": "10-2-2013",
+    "plan": "1-20",
+	"revisionDate": "2-13-2013",
+    "elevation": "A",
+	"plat": "PHA",
+	"lot": "357",
+    "request": "Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 1
+  }, {
+    "redlineId": 2,
+	"userId": 2,
+	"submitDate": "10-3-2013",
+    "plan": "20-30",
+	"revisionDate": "1-15-2013",
+    "elevation": "J",
+	"plat": "OAK2",
+	"lot": "348",
+    "request": "Donec nec placerat tellus, at vestibulum velit. Pellentesque quis pretium turpis.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 2
+  }, {
+    "redlineId": 3,
+	"userId": 1,
+	"submitDate": "9-3-2013",
+    "plan": "27-40",
+	"revisionDate": null,
+    "elevation": "D",
+	"plat": "HON",
+	"lot": "33",
+    "request": "Aliquam vulputate nulla vitae justo accumsan, vitae vestibulum tellus pulvinar. Nunc adipiscing lorem metus, a ornare velit commodo sed. Vivamus porta facilisis dui, sed egestas nunc placerat nec.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 3
+  }, {
+	"redlineId": 4,
+	"userId": 2,
+	"submitDate": "10-18-2013",
+    "plan": "25-40",
+	"revisionDate": "7-11-2013",
+    "elevation": "F",
+	"plat": "PH1A",
+	"lot": "2",
+    "request": "Donec arcu erat, gravida eu nunc non, posuere gravida magna.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 1
+  }, {
+	"redlineId": 5,
+	"userId": 3,
+	"submitDate": "10-19-2013",
+    "plan": "6-40",
+	"revisionDate": "8-12-2013",
+    "elevation": "A4",
+	"plat": "PHA",
+	"lot": "56",
+    "request": "Suspendisse dapibus fermentum justo non fermentum. Quisque vel accumsan lacus, eu feugiat felis",
+	"costEstReq": "y",
+	"designApprReq": null,
+	"status": 2
+  }, {
+	"redlineId": 6,
+	"userId": 1,
+	"submitDate": "10-20-2013",
+    "plan": "4-40",
+	"revisionDate": "6-03-2013",
+    "elevation": "2R",
+	"plat": "KDR",
+	"lot": "80",
+    "request": "Pellentesque rhoncus tellus sed neque pellentesque posuere. Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 3
+  }, {
+	"redlineId": 7,
+	"userId": 1,
+	"submitDate": "10-15-2013",
+    "plan": "4-34",
+	"revisionDate": "2-13-2013",
+    "elevation": "F",
+	"plat": "KDR",
+	"lot": "10",
+    "request": "Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 1
+  }]
+  
+}
