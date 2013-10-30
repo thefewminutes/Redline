@@ -82,6 +82,14 @@ controllers.inprogressController = function ($scope, inprogressFactory) {
 	function init() {
 		$scope.redlines = inprogressFactory.getRedlines();
 	}
+	// display redline description in table when row is clicked
+	$scope.selectRedline = function(redline) {
+		$scope.selectedRedline = redline;
+	};
+	$scope.isSelected = function(redline) {
+		return $scope.selectedRedline === redline;
+	};
+	
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
@@ -99,6 +107,14 @@ controllers.pendingController = function ($scope, pendingFactory) {
 	function init() {
 		$scope.redlines = pendingFactory.getRedlines();
 	}
+	
+	// display redline description in table when row is clicked
+	$scope.selectRedline = function(redline) {
+		$scope.selectedRedline = redline;
+	};
+	$scope.isSelected = function(redline) {
+		return $scope.selectedRedline === redline;
+	};
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
@@ -116,6 +132,14 @@ controllers.closedController = function ($scope, closedFactory) {
 	function init() {
 		$scope.redlines = closedFactory.getRedlines();
 	}
+	
+	// display redline description in table when row is clicked
+	$scope.selectRedline = function(redline) {
+		$scope.selectedRedline = redline;
+	};
+	$scope.isSelected = function(redline) {
+		return $scope.selectedRedline === redline;
+	};
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);

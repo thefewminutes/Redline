@@ -7,7 +7,7 @@
     <div>
         <div id="inprogress"><!-- in progress tab content -->
             <h2>In-progress</h2>
-            <p class="text-muted">Click ID to approve, edit or mark complete.</p>
+            <p class="text-muted">Click row to view request. Click ID to approve, edit or mark complete.</p>
             <div class="table-responsive">
             <input ng-model="search" class="form-control input-sm" type="search" placeholder="Search">
                 <!-- pager -->
@@ -18,29 +18,30 @@
                     <li><a href="#">3</a></li>
                     <li><a href="#">&raquo;</a></li>
                 </ul>
-                <table id="tbl-inProgress" class="table table-striped table-hover table-condensed table-bordered">
+                <table id="tbl-inProgress" class="table table-hover table-condensed table-bordered">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Plan</th>
                             <th>Elevation</th>
                             <th>Revision Date</th>
-                            <th>Request</th>
                             <th>Submitted by</th>
                             <th>Submit Date</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
-                    <tbody class="expandable">
-                        <tr ng-repeat="redline in redlines.content.redlines | filter:search">
+                    <tbody class="expandable" ng-repeat="redline in redlines.content.redlines | filter:search" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)">
+                        <tr>
                             <td><a class="btn-sm btn-primary" href="#">{{redline.redlineId}}</a></td>
                             <td>{{redline.plan}}</td>
                             <td>{{redline.elevation}}</td>
                             <td size="10">{{redline.revisionDate}}</td>
-                            <td>{{redline.request}}</td>
                             <td>{{redline.userId}}</td>
-                            <td size="10">{{redline.submitDate}}</td>
+                            <td>{{redline.submitDate}}</td>
                             <td class="del_td"><button type="button" class="close" aria-hidden="true" ng-click="deleteRedline(redline)">&times;</button></td>
+                        </tr>
+                        <tr ng-switch-when="true">
+                        	<td class="active" colspan="7">{{redline.request}}</td>
                         </tr>
                     </tbody>
                 </table>
