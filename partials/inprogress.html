@@ -41,7 +41,8 @@
                             <td class="del_td"><button type="button" class="close" aria-hidden="true" ng-click="deleteRedline(redline)">&times;</button></td>
                         </tr>
                         <tr ng-switch-when="true">
-                        	<td class="danger" colspan="7"><strong>Request: {{redline.request}}</strong></td>
+                        	<td class="danger" colspan="6">Request: {{redline.request}}</td>
+                            <td><span class="glyphicon glyphicon-print pull-right"></span></td>
                         </tr>
                     </tbody>
                 </table>
