@@ -89,7 +89,14 @@ controllers.inprogressController = function ($scope, inprogressFactory) {
 	$scope.isSelected = function(redline) {
 		return $scope.selectedRedline === redline;
 	};
-	
+	// highlight parent row if redline is selected
+	$scope.getClass = function(ind) {
+		if( ind === $scope.selectedRedline ){
+            return "success";
+        } else{
+            return "";
+        }
+	};
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
@@ -115,6 +122,14 @@ controllers.pendingController = function ($scope, pendingFactory) {
 	$scope.isSelected = function(redline) {
 		return $scope.selectedRedline === redline;
 	};
+	// highlight parent row if redline is selected
+	$scope.getClass = function(ind) {
+		if( ind === $scope.selectedRedline ){
+            return "success";
+        } else{
+            return "";
+        }
+	};
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
@@ -139,6 +154,14 @@ controllers.closedController = function ($scope, closedFactory) {
 	};
 	$scope.isSelected = function(redline) {
 		return $scope.selectedRedline === redline;
+	};
+	// highlight parent row if redline is selected
+	$scope.getClass = function(ind) {
+		if( ind === $scope.selectedRedline ){
+            return "success";
+        } else{
+            return "";
+        }
 	};
 	// delete redline
 	$scope.deleteRedline = function (item) {
