@@ -30,7 +30,7 @@
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
-                    <tbody ng-repeat="redline in redlines.content.redlines | filter:{status:1} | filter:search" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
+                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:1} | filter:search) | limitTo:10" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                         <tr ng-class="getClass(redline)">
                             <td><a class="btn-sm btn-primary" href="#">{{redline.redlineId}}</a></td>
                             <td>{{redline.plan}}</td>
@@ -55,6 +55,8 @@
                 <li><a href="#">3</a></li>
                 <li><a href="#">&raquo;</a></li>
             </ul>
+            <p>Total Number of Filtered Records: {{filteredRedlines.length}}</p>
+            <p>Grand Total Records (unfiltered): {{redlines.content.redlines.length}}</p>
         </div><!-- /in progress tab content -->
     </div>
 </div><!-- /#redlineTabs -->
