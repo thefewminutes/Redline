@@ -21,12 +21,12 @@
                 <table id="tbl-inProgress" class="table table-hover table-condensed table-bordered">
                     <thead>
                         <tr>
-                            <th ng-click="sort('redlineId')">ID</th>
-                            <th ng-click="sort('plan')">Plan</th>
-                            <th ng-click="sort('elevation')">Elevation</th>
-                            <th ng-click="sort('revisionDate')">Revision Date</th>
-                            <th ng-click="sort('userId')">Submitted by</th>
-                            <th ng-click="sort('submitDate')">Submit Date</th>
+                            <th ng-click="sort('redlineId')">ID<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('redlineId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('redlineId')}"></i></th>
+                            <th ng-click="sort('plan')">Plan<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('plan'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('plan')}"></i></th>
+                            <th ng-click="sort('elevation')">Elevation<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('elevation'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('elevation')}"></i></th>
+                            <th ng-click="sort('revisionDate')">Revision Date<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('revisionDate'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('revisionDate')}"></i></th>
+                            <th ng-click="sort('userId')">Submitted by<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('userId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('userId')}"></i></th>
+                            <th ng-click="sort('submitDate')">Submit Date<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('submitDate'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('submitDate')}"></i></th>
                             <th class="del_td"><i class="glyphicon glyphicon-minus-sign">&nbsp;</i></th>
                         </tr>
                     </thead>
@@ -41,7 +41,8 @@
                             <td class="del_td"><button type="button" class="close" aria-hidden="true" ng-click="deleteRedline(redline)">&times;</button></td>
                         </tr>
                         <tr ng-switch-when="true">
-                        	<td class="danger" colspan="7"><strong>Request: {{redline.request}}</strong></td>
+                        	<td class="danger" colspan="6">{{redline.request}}</td>
+                            <td class="del_td"><i class="glyphicon glyphicon-print"></i></td>
                         </tr>
                     </tbody>
                 </table>

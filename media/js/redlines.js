@@ -63,13 +63,6 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
             return "";
         }
 	};
-	// delete redline
-	$scope.deleteRedline = function (item) {
-		var index = $scope.redlines.content.redlines.indexOf(item);
-    	if (index != -1) {
-        	$scope.redlines.content.redlines.splice(index, 1);
-    	} 
-	};
 	
 	// sorting
 	$scope.sortField = undefined;
@@ -83,7 +76,22 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
 			$scope.reverse = false;
 		}
 	};
-
+	
+	// sorting visual indicators
+	$scope.isSortUp = function (fieldName) {
+		return $scope.sortField === fieldName && !$scope.reverse;
+	};
+	$scope.isSortDown = function (fieldName) {
+		return $scope.sortField === fieldName && $scope.reverse;
+	};
+ 
+	// delete redline
+	$scope.deleteRedline = function (item) {
+		var index = $scope.redlines.content.redlines.indexOf(item);
+    	if (index != -1) {
+        	$scope.redlines.content.redlines.splice(index, 1);
+    	} 
+	};
 };
 
 // pending tab controller
@@ -121,6 +129,14 @@ controllers.pendingController = function ($scope, redlinesFactory) {
 			$scope.sortField = fieldName; 
 			$scope.reverse = false;
 		}
+	};
+	
+	// sorting visual indicators
+	$scope.isSortUp = function (fieldName) {
+		return $scope.sortField === fieldName && !$scope.reverse;
+	};
+	$scope.isSortDown = function (fieldName) {
+		return $scope.sortField === fieldName && $scope.reverse;
 	};
 	
 	// delete redline
@@ -168,6 +184,14 @@ controllers.closedController = function ($scope, redlinesFactory) {
 			$scope.sortField = fieldName; 
 			$scope.reverse = false;
 		}
+	};
+	
+	// sorting visual indicators
+	$scope.isSortUp = function (fieldName) {
+		return $scope.sortField === fieldName && !$scope.reverse;
+	};
+	$scope.isSortDown = function (fieldName) {
+		return $scope.sortField === fieldName && $scope.reverse;
 	};
 	
 	// delete redline

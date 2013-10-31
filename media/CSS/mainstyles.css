@@ -39,7 +39,7 @@ html, body {
 }
 .del_td {
 	text-align:center;
-	width:3em;
+	width:1em;
 }
 td > button.close {
 	float:none;
@@ -169,4 +169,18 @@ td > button.close {
 .glyphicon-minus-sign {
 	margin-left:auto;
 	margin-right:auto;
+}
+.icon-chevron-up {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid black;
+}
+.icon-chevron-down {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #f00;
 }
