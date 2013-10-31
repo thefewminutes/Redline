@@ -22,12 +22,12 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Plan</th>
-                            <th>Elevation</th>
-                            <th>Revision Date</th>
-                            <th>Submitted by</th>
-                            <th>Submit Date</th>
-                            <th>&nbsp;</th>
+                            <th ng-click="sort:('plan')">Plan</th>
+                            <th ng-click="sort:('elevation')">Elevation</th>
+                            <th ng-click="sort:('revision-date')">Revision Date</th>
+                            <th ng-click="sort:('submitted-by')">Submitted by</th>
+                            <th ng-click="sort:('submit-date')">Submit Date</th>
+                            <th class="del_td"><i class="glyphicon glyphicon-minus-sign">&nbsp;</i></th>
                         </tr>
                     </thead>
                     <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:1} | filter:search) | limitTo:10" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
@@ -42,7 +42,7 @@
                         </tr>
                         <tr ng-switch-when="true">
                         	<td class="danger" colspan="6">Request: {{redline.request}}</td>
-                            <td><span class="glyphicon glyphicon-print pull-right"></span></td>
+                            <td class="del_td"><i class="glyphicon glyphicon-print"></i></td>
                         </tr>
                     </tbody>
                 </table>

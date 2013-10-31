@@ -39,6 +39,7 @@ html, body {
 }
 .del_td {
 	text-align:center;
+	width:3em;
 }
 td > button.close {
 	float:none;
@@ -164,4 +165,8 @@ td > button.close {
 }
 .dark-gray {
 	background-color: #f6f6f6;
+}
+.glyphicon-minus-sign {
+	margin-left:auto;
+	margin-right:auto;
 }
