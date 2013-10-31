@@ -21,16 +21,16 @@
                 <table id="tbl-inProgress" class="table table-hover table-condensed table-bordered">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Plan</th>
-                            <th>Elevation</th>
-                            <th>Revision Date</th>
-                            <th>Submitted by</th>
-                            <th>Submit Date</th>
-                            <th>&nbsp;</th>
+                            <th ng-click="sort('redlineId')">ID</th>
+                            <th ng-click="sort('plan')">Plan</th>
+                            <th ng-click="sort('elevation')">Elevation</th>
+                            <th ng-click="sort('revisionDate')">Revision Date</th>
+                            <th ng-click="sort('userId')">Submitted by</th>
+                            <th ng-click="sort('submitDate')">Submit Date</th>
+                            <th class="del_td"><i class="glyphicon glyphicon-minus-sign">&nbsp;</i></th>
                         </tr>
                     </thead>
-                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:2} | filter:search) | limitTo:10" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
+                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:2} | filter:search | orderBy:sortField:reverse) | limitTo:10" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                         <tr ng-class="getClass(redline)">
                             <td><a class="btn-sm btn-primary" href="#">{{redline.redlineId}}</a></td>
                             <td>{{redline.plan}}</td>

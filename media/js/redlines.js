@@ -70,6 +70,19 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
         	$scope.redlines.content.redlines.splice(index, 1);
     	} 
 	};
+	
+	// sorting
+	$scope.sortField = undefined;
+	$scope.reverse = false;
+	
+	$scope.sort = function (fieldName) { 
+		if ($scope.sortField === fieldName) { 
+			$scope.reverse = !$scope.reverse; 
+		} else { 
+			$scope.sortField = fieldName; 
+			$scope.reverse = false;
+		}
+	};
 
 };
 
@@ -96,6 +109,20 @@ controllers.pendingController = function ($scope, redlinesFactory) {
             return "";
         }
 	};
+	
+	// sorting
+	$scope.sortField = undefined;
+	$scope.reverse = false;
+	
+	$scope.sort = function (fieldName) { 
+		if ($scope.sortField === fieldName) { 
+			$scope.reverse = !$scope.reverse; 
+		} else { 
+			$scope.sortField = fieldName; 
+			$scope.reverse = false;
+		}
+	};
+	
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
@@ -129,6 +156,20 @@ controllers.closedController = function ($scope, redlinesFactory) {
             return "";
         }
 	};
+	
+	// sorting
+	$scope.sortField = undefined;
+	$scope.reverse = false;
+	
+	$scope.sort = function (fieldName) { 
+		if ($scope.sortField === fieldName) { 
+			$scope.reverse = !$scope.reverse; 
+		} else { 
+			$scope.sortField = fieldName; 
+			$scope.reverse = false;
+		}
+	};
+	
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
