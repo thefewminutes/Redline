@@ -21,44 +21,10 @@ redlineApp.config(function($routeProvider) {
 });
 //$locationProvider.html5Mode(true);
 
-// get all the in progress redlines
-redlineApp.factory('inprogressFactory', function($http) {
+// get all the redlines
+redlineApp.factory('redlinesFactory', function($http) {
 	var redlines = {content:null};
-	$http.get('media/json/inprogress.json')
-		.success(function(data) {
-			redlines.content = data;
-	})
-		.error(function(data) {
-			alert('could not get data');
-	});
-	var factory = {};
-	factory.getRedlines = function() {
-		return redlines;
-	};
-	return factory;
-});
-
-// get all the pending redlines
-redlineApp.factory('pendingFactory', function($http) {
-	var redlines = {content:null};
-	$http.get('media/json/pending.json')
-		.success(function(data) {
-			redlines.content = data;
-	})
-		.error(function(data) {
-			alert('could not get data');
-	});
-	var factory = {};
-	factory.getRedlines = function() {
-		return redlines;
-	};
-	return factory;
-});
-
-// get all the closed redlines
-redlineApp.factory('closedFactory', function($http) {
-	var redlines = {content:null};
-	$http.get('media/json/closed.json')
+	$http.get('media/json/redlines.json')
 		.success(function(data) {
 			redlines.content = data;
 	})
@@ -76,11 +42,11 @@ redlineApp.factory('closedFactory', function($http) {
 var controllers = {};
 
 // inprogress tab controller
-controllers.inprogressController = function ($scope, inprogressFactory) {
+controllers.inprogressController = function ($scope, redlinesFactory) {
 	$scope.redlines = [];
 	init();
 	function init() {
-		$scope.redlines = inprogressFactory.getRedlines();
+		$scope.redlines = redlinesFactory.getRedlines();
 	}
 	// display redline description in table when row is clicked
 	$scope.selectRedline = function(redline) {
@@ -108,11 +74,11 @@ controllers.inprogressController = function ($scope, inprogressFactory) {
 };
 
 // pending tab controller
-controllers.pendingController = function ($scope, pendingFactory) {
+controllers.pendingController = function ($scope, redlinesFactory) {
 	$scope.redlines = [];
 	init();
 	function init() {
-		$scope.redlines = pendingFactory.getRedlines();
+		$scope.redlines = redlinesFactory.getRedlines();
 	}
 	
 	// display redline description in table when row is clicked
@@ -141,11 +107,11 @@ controllers.pendingController = function ($scope, pendingFactory) {
 };
 
 // closed tab controller
-controllers.closedController = function ($scope, closedFactory) {
+controllers.closedController = function ($scope, redlinesFactory) {
 	$scope.redlines = [];
 	init();
 	function init() {
-		$scope.redlines = closedFactory.getRedlines();
+		$scope.redlines = redlinesFactory.getRedlines();
 	}
 	
 	// display redline description in table when row is clicked
