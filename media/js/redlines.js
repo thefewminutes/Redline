@@ -17,6 +17,11 @@ redlineApp.config(function($routeProvider) {
 				controller: 'closedController',
 				templateUrl: 'partials/closed.html'
 			})
+		.when('/search',
+			{
+				controller: 'searchController',
+				templateUrl: 'partials/search.html'
+			})
 		.otherwise({ redirectTo: '/'});
 });
 //$locationProvider.html5Mode(true);
@@ -87,7 +92,7 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
 	};
 	
 	//pagination
-	$scope.pageSize = 5;
+	$scope.pageSize = 5; // number of records to display in table
 	$scope.pages = [];
 	$scope.$watch('filteredRedlines.length', function(filteredSize){
 		$scope.pages.length = 0;
@@ -159,7 +164,7 @@ controllers.pendingController = function ($scope, redlinesFactory) {
 	};
 	
 	//pagination
-	$scope.pageSize = 5;
+	$scope.pageSize = 5; // number of records to display in table
 	$scope.pages = [];
 	$scope.$watch('filteredRedlines.length', function(filteredSize){
 		$scope.pages.length = 0;
@@ -232,7 +237,7 @@ controllers.closedController = function ($scope, redlinesFactory) {
 	};
 	
 	//pagination
-	$scope.pageSize = 5;
+	$scope.pageSize = 5; // number of records to display in table
 	$scope.pages = [];
 	$scope.$watch('filteredRedlines.length', function(filteredSize){
 		$scope.pages.length = 0;
@@ -257,6 +262,10 @@ controllers.closedController = function ($scope, redlinesFactory) {
     	} 
 	};
 
+};
+
+controllers.searchController = function ($scope) {
+	
 };
 
 redlineApp.controller(controllers);

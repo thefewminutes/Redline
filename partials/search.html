@@ -1,0 +1,235 @@
+<!-- begin page content -->
+            <h1>Redline Wizard</h1>
+            <p class="text-muted">(1) Search for a plan/revision, (2) select from results and (3) enter your request</p>
+            <!-- tabs -->
+            <ul class="nav nav-tabs" id="wizardTabs">
+            	<li class="active"><a href="#search" data-toggle="tab" class="gotoSearch">Search</a></li>
+                <li><a id="requestTab" href="#requestform" data-toggle="tab">Request Form</a></li>
+            </ul>
+            
+            <!-- tab content -->
+            <div class="tab-content">
+            	<!-- search -->
+            	<div class="tab-pane active" id="search">
+                <h3>Search</h3>
+                	<p><form class="form-inline" role="form" id="planSearch">
+                    	<div class="form-group">
+                        	<label class="sr-only" for="inputPlan">Plan</label>
+                            <input type="text" class="form-control input-lg validate[required] typeahead-plans" id="inputPlan" placeholder="Plan #/name">
+                        </div>
+                        <div class="form-group">
+                        	<label class="sr-only" for="inputRevisionDate">Revision date</label>
+                            <input type="text" class="form-control input-lg" id="inputRevisionDate" placeholder="Revision date (optional)" readonly>
+                        </div>
+                        <button id="btnSearch" class="btn btn-primary btn-lg">Search</button>
+                    </form>
+                    <div id="search_results">
+                    	<h3>Results</h3>
+                    	<p>Select plan from search results to add request</p>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover" id="tblResults">
+                                <thead>
+                                    <tr>
+                                        <th>Plan #</th>
+                                        <th>Revision Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="#" class="gotoForm">3-40.02</a></td>
+                                        <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="gotoForm">3-40.02</a></td>
+                                        <td>8-15-2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="gotoForm">3-40.02</a></td>
+                                        <td>9-12-2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="gotoForm">3-40.02</a></td>
+                                        <td>9-15-2013</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- request form -->
+                <div class="tab-pane" id="requestform">
+    		<h2>Plan #3-40.02</h2>
+    		<h3>Revision 9-15-2013</h3>
+    		<p class="text-muted">Submitted by: Loggedin User | <a href="#" class="gotoSearch">Search for another plan</a></p>
+            <form role="form" id="redlineForm">
+    			<div class="panel panel-default">
+    				<div class="panel-heading">
+        				<h3 class="panel-title">Redline details</h3>
+        			</div>
+                    <div class="panel-body">
+                    	<div class="row">
+            				<div class="col-md-4">
+            					<div class="form-group">
+                                    <label for="ElevationName">Elevation # or name</label>
+                                    <select class="form-control" id="ElevationName">
+                                    	<option>-select-</option>
+                                        <option>A</option>
+                                        <option>A3</option>
+                                        <option>A4</option>
+                                        <option>F</option>
+                                        <option>F2</option>
+                                        <option>F3</option>
+                                        <option>F4</option>
+                                        <option>H</option>
+                                        <option>H2</option>
+                                        <option>H3</option>
+                                        <option>H4</option>
+                                        <option>P2</option>
+                                        <option>S4</option>
+                                        <option>S5</option>
+                                        <option>S6</option>
+                                        <option>T</option>
+                                        <option>T3</option>
+                                        <option>T4</option>
+                                        <option>U3</option>
+                                        <option>U4</option>
+                                        <option>V</option>
+                                        <option>V4</option>
+                                        <option>W3</option>
+                                        <option>W4</option>
+                                        <option>XA</option>
+                                        <option>XA2</option>
+                                        <option>XA4</option>
+                                        <option>XB</option>
+                                        <option>XB3</option>
+                                        <option>XC</option>
+                                        <option>XC3</option>
+                                        <option>XC4</option>
+                                    </select>
+                				</div>
+            				</div>
+                        	<div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="plat-dd">Plat</label>
+                                    <select class="form-control" id="plat-dd">
+                                    	<option>-select-</option>
+                                        <option>plat 1</option>
+                                        <option>plat 2</option>
+                                        <option>plat 3</option>
+                                        <option>plat 4</option>
+                                    </select>
+                                </div>
+                        	</div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="lot-dd">Lot #</label>
+                                    <select class="form-control" id="lot-dd">
+                                    	<option>-select-</option>
+                                        <option>BRG-305</option>
+                                        <option>BRG-358</option>
+                                        <option>BRG-371</option>
+                                        <option>EDG-104</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+        			<div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="redline-desc">Description of correction</label>
+                                <textarea id="redline-desc" name="redline-desc" class="form-control validate[required] text-input" data-prompt-position="topRight" rows="5"></textarea>
+                                <span class="help-block">Please describe changes in detail.</span>
+                            </div>
+                        </div>
+                        <div class="visible-xs visible-sm">
+                            <p class="col-md-3 text-info">This device is not able to upload photos.</p>
+                        </div>
+                        <div class="col-md-3 hidden-xs hidden-sm">
+                            <div class="form-group">
+                                <label for="lefile">Upload image</label>
+                                <input id="lefile" type="file">
+                                <div class="input-append">
+                                    <input id="photoCover" class="form-control" type="text">
+                                    <a class="btn btn-primary" onclick="$('input[id=lefile]').click();">Browse</a>
+                                    <button type="button" class="btn btn-md btn-primary" disabled="disabled">Upload</button>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-3">
+                            <div class="form-group">
+
+                                <label>Files on server</label>
+                                <div id="uploadfiles">
+                                    	<p class="text-info">No files on server</p><!-- upload files -->
+                                </div>
+                            </div>
+                        </div>
+            		</div><!-- /row -->
+                </div><!-- /panel-container -->
+            </div><!-- /panel -->
+
+                <!-- begin admin section -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Administrators</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Department approval <abbr title="required">req'd</abbr> <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Cost estimate required
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Design approval required
+                                    </label>
+                                </div>
+                                <p><code>This section should be programmatically hidden after approval</code></p>      
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Set redline approval status <a href="#" rel="popover" id="approvalPopover" data-original-title="Redline approval status" data-content="Mark approved to move redline to in-progress. Reject to move to closed. Requestor is notified of status and reason by email when you submit the form"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Approved
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="cb_rejected" type="checkbox" class="check"> Rejected
+                                    </label>
+                                </div>
+                                <div id="reason_window">
+                                    <div class="form-group has-warning">
+                                        <label for="reason">Reason</label>
+                                        <textarea rows="2" class="form-control" id="reason" required></textarea>
+                                        <span class="help-block">Please enter the reason for rejection</span>
+                                    </div> 
+                                </div>   
+                            </div>
+                        </div>
+                    </div><!-- /panel-body -->
+                </div><!-- /panel-container -->
+                <!-- end admin section -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Edit</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Mark Complete</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Delete</button>
+                    </div>
+                </div>
+            </form>
+                </div>
+            </div><!-- /tab content -->
+            
+        </div><!-- /container -->
