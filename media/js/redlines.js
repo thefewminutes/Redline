@@ -48,6 +48,7 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
 	function init() {
 		$scope.redlines = redlinesFactory.getRedlines();
 	}
+	
 	// display redline description in table when row is clicked
 	$scope.selectRedline = function(redline) {
 		$scope.selectedRedline = redline;
@@ -55,6 +56,7 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
 	$scope.isSelected = function(redline) {
 		return $scope.selectedRedline === redline;
 	};
+	
 	// highlight parent row if redline is selected
 	$scope.getClass = function(ind) {
 		if( ind === $scope.selectedRedline ){
@@ -67,7 +69,6 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
 	// sorting
 	$scope.sortField = undefined;
 	$scope.reverse = false;
-	
 	$scope.sort = function (fieldName) { 
 		if ($scope.sortField === fieldName) { 
 			$scope.reverse = !$scope.reverse; 
@@ -84,8 +85,26 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
 	$scope.isSortDown = function (fieldName) {
 		return $scope.sortField === fieldName && $scope.reverse;
 	};
+	
+	//pagination
+	$scope.pageSize = 5;
+	$scope.pages = [];
+	$scope.$watch('filteredRedlines.length', function(filteredSize){
+		$scope.pages.length = 0;
+		var noOfPages = Math.ceil(filteredSize / $scope.pageSize);
+		for (var i=0; i<noOfPages; i++) {
+			$scope.pages.push(i);
+		}
+	});
+	
+	$scope.pageNo = 0;
+	$scope.setActivePage = function (pageNo) {
+		if (pageNo >=0 && pageNo < $scope.pages.length) {
+			$scope.pageNo = pageNo;
+		}
+	};
  
-	// delete redline
+	// delete
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
     	if (index != -1) {
@@ -205,3 +224,16 @@ controllers.closedController = function ($scope, redlinesFactory) {
 };
 
 redlineApp.controller(controllers);
+
+// pagination filter
+redlineApp.filter('pagination', function(){
+	return function(inputArray, selectedPage, pageSize) {
+		var start = selectedPage*pageSize;
+		if(inputArray) {
+			console.log(inputArray);
+			return inputArray.slice(start, start + pageSize);
+		} else {
+			console.log("there is no inputArray");
+		}
+	};
+});
