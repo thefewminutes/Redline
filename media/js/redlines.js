@@ -158,6 +158,24 @@ controllers.pendingController = function ($scope, redlinesFactory) {
 		return $scope.sortField === fieldName && $scope.reverse;
 	};
 	
+	//pagination
+	$scope.pageSize = 5;
+	$scope.pages = [];
+	$scope.$watch('filteredRedlines.length', function(filteredSize){
+		$scope.pages.length = 0;
+		var noOfPages = Math.ceil(filteredSize / $scope.pageSize);
+		for (var i=0; i<noOfPages; i++) {
+			$scope.pages.push(i);
+		}
+	});
+	
+	$scope.pageNo = 0;
+	$scope.setActivePage = function (pageNo) {
+		if (pageNo >=0 && pageNo < $scope.pages.length) {
+			$scope.pageNo = pageNo;
+		}
+	};
+	
 	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.redlines.indexOf(item);
@@ -211,6 +229,24 @@ controllers.closedController = function ($scope, redlinesFactory) {
 	};
 	$scope.isSortDown = function (fieldName) {
 		return $scope.sortField === fieldName && $scope.reverse;
+	};
+	
+	//pagination
+	$scope.pageSize = 5;
+	$scope.pages = [];
+	$scope.$watch('filteredRedlines.length', function(filteredSize){
+		$scope.pages.length = 0;
+		var noOfPages = Math.ceil(filteredSize / $scope.pageSize);
+		for (var i=0; i<noOfPages; i++) {
+			$scope.pages.push(i);
+		}
+	});
+	
+	$scope.pageNo = 0;
+	$scope.setActivePage = function (pageNo) {
+		if (pageNo >=0 && pageNo < $scope.pages.length) {
+			$scope.pageNo = pageNo;
+		}
 	};
 	
 	// delete redline

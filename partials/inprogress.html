@@ -12,9 +12,9 @@
             <input ng-model="search" class="form-control input-sm" type="search" placeholder="Search">
                 <!-- pager -->
 				<ul class="pagination pagination-sm">
-                	<li ng-class="{disabled: pageNo == 0}"><a ng-click="activePage(page-1)">&laquo;</a></li>
+                	<li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
         			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
-        			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="activePage(page+1)">&raquo;</a></li>
+        			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
 				</ul>
                 <table id="tbl-inProgress" class="table table-hover table-condensed table-bordered">
                     <thead>
@@ -47,9 +47,9 @@
             </div>
             <!-- pager -->
             <ul class="pagination pagination-sm">
-                <li ng-class="{disabled: pageNo == 0}"><a ng-click="activePage(page-1)">&laquo;</a></li>
+                <li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
         		<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
-        		<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="activePage(page+1)">&raquo;</a></li>
+        		<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
             </ul>
             <p>Total: {{filteredRedlines.length}}</p>
         </div><!-- /in progress tab content -->

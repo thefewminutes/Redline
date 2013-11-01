@@ -11,13 +11,11 @@
             <div class="table-responsive">
             <input ng-model="search" class="form-control input-sm" type="search" placeholder="Search">
             	<!-- pager -->
-                <ul class="pagination pagination-sm">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
+				<ul class="pagination pagination-sm">
+                	<li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
+        			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
+        			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
+				</ul>
                 <table id="tbl-inProgress" class="table table-hover table-condensed table-bordered">
                     <thead>
                         <tr>
@@ -30,7 +28,7 @@
                             <th class="del_td"><i class="glyphicon glyphicon-minus-sign">&nbsp;</i></th>
                         </tr>
                     </thead>
-                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:2} | filter:search | orderBy:sortField:reverse) | limitTo:10" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
+                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:2} | filter:search | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                         <tr ng-class="getClass(redline)">
                             <td><a class="btn-sm btn-primary" href="#">{{redline.redlineId}}</a></td>
                             <td>{{redline.plan}}</td>
@@ -47,15 +45,12 @@
                     </tbody>
                 </table>
                 <!-- pager -->
-                <ul class="pagination pagination-sm">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
-                <p>Total Number of Filtered Records: {{filteredRedlines.length}}</p>
-            	<p>Grand Total Records (unfiltered): {{redlines.content.redlines.length}}</p>
+				<ul class="pagination pagination-sm">
+                	<li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
+        			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
+        			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
+				</ul>
+                <p>Total: {{filteredRedlines.length}}</p>
             </div>
         </div><!-- /pending tab content -->
     </div>
