@@ -229,11 +229,6 @@ redlineApp.controller(controllers);
 redlineApp.filter('pagination', function(){
 	return function(inputArray, selectedPage, pageSize) {
 		var start = selectedPage*pageSize;
-		if(inputArray) {
-			console.log(inputArray);
-			return inputArray.slice(start, start + pageSize);
-		} else {
-			console.log("there is no inputArray");
-		}
+		return inputArray.slice(start, start + pageSize);
 	};
 });
