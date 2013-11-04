@@ -6,7 +6,7 @@
 	}, {
 		"planId": 2,
 		"planName": "20-30",
-		"revision": null
+		"revision": "N/A"
 	}, {
 		"planId": 3,
 		"planName": "11-40",
@@ -22,7 +22,7 @@
 	}, {
 		"planId": 6,
 		"planName": "6-40",
-		"revision": null
+		"revision": "N/A"
 	}, {
 		"planId": 7,
 		"planName": "25-40",
@@ -38,6 +38,18 @@
 	}, {
 		"planId": 10,
 		"planName": "18-30",
-		"revision": null
+		"revision": "N/A"
+	}, {
+		"planId": 11,
+		"planName": "18-30",
+		"revision": "06-12-2013"
+	}, {
+		"planId": 12,
+		"planName": "18-30",
+		"revision": "08-23-2013"
+	}, {
+		"planId": 13,
+		"planName": "18-30",
+		"revision": "09-01-2013"
 	}]
 }

@@ -2,46 +2,48 @@
             <h2>New Redline Request</h2>
             <p class="text-muted">(1) Search for a plan, (2) select from results and (3) enter your request</p>
             <!-- tabs -->
-            <ul class="nav nav-pills" id="wizardTabs">
-            	<li class="active"><a href="#search" data-toggle="tab" class="gotoSearch">Search</a></li>
-                <li class="disabled"><a href="#" data-toggle="tab">Request Form</a></li>
-            </ul>
+            <p>
+                <ul class="nav nav-pills" id="wizardTabs">
+                    <li class="active"><a href="#search" data-toggle="tab" class="gotoSearch">Search</a></li>
+                    <li class="disabled"><a href="#" data-toggle="tab">Request Form</a></li>
+                </ul>
+            </p>
             
             <!-- tab content -->
             <div class="tab-content">
             	<!-- search -->
             	<div class="tab-pane active" id="search">
-                <h3>Search</h3>
-                	<p><form class="form-inline" role="form" id="planSearch">
-                    	<div class="form-group">
-                        	<label class="sr-only" for="inputPlan">Plan</label>
-                            <input type="text" class="form-control input-lg typeahead-plans" id="inputPlan" placeholder="Plan #/name">
-                        </div>
-                        <div class="form-group">
-                        	<label class="sr-only" for="inputRevisionDate">Revision date</label>
-                            <input type="text" class="form-control input-lg" placeholder="Revision date (optional)">
-                        </div>
-                    </form>
+                	<div class="well well-lg">
+                    	<h3>Search</h3>
+                        <form class="form-inline" role="form" id="planSearch">
+                            <div class="form-group">
+                                <label class="sr-only" for="inputPlan">Plan</label>
+                                <input ng-model="plansearch" type="text" class="form-control input-lg typeahead-plans" id="inputPlan" placeholder="Plan #">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="inputRevisionDate">Revision date</label>
+                                <input ng-model="planrevision" type="text" class="form-control input-lg" placeholder="Revision date">
+                            </div>
+                        </form>
+                    </div>
                     <div id="searchresults" class="content">
                         <div class="table-responsive">
                             <table class="table table-hover table-condensed">
                                 <thead>
                                     <tr>
-                                        <th>Plan #</th>
-                                        <th>Revision Date</th>
+                                        <th ng-click="sort('planName')">Plan #<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('planName'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('planName')}"></i></th>
+                                        <th ng-click="sort('revision')">Revision Date<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('revision'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('revision')}"></i></th>
                                     </tr>
                                 </thead>
-                                <tbody ng-repeat="plan in plans.content.plans" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
+                                <tbody ng-repeat="plan in filteredPlans = (plans.content.plans | filter:{planName:plansearch} | filter:{revision:planrevision} | orderBy:sortField:reverse)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                                     <tr>
                                         <td><a href="#" class="gotoForm">{{plan.planName}}</a></td>
                                         <td>{{plan.revision}}</td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        </div>
+                        </div><!-- /table-responsive -->
+                    </div><!-- /searchresults -->
                 </div>
-                
 
-            
         <!-- /container -->
