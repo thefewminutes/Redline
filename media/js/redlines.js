@@ -22,6 +22,11 @@ redlineApp.config(function($routeProvider) {
 				controller: 'searchController',
 				templateUrl: 'partials/search.html'
 			})
+		.when('/newredline',
+			{
+				controller: 'newredlineController',
+				templateUrl: 'partials/requestform.html'
+			})
 		.otherwise({ redirectTo: '/'});
 });
 //$locationProvider.html5Mode(true);
@@ -309,6 +314,11 @@ controllers.searchController = function ($scope, plansFactory) {
 	$scope.isSortDown = function (fieldName) {
 		return $scope.sortField === fieldName && $scope.reverse;
 	};
+	
+};
+
+// new redline controller
+controllers.newredlineController = function ($scope) {
 	
 };
 
