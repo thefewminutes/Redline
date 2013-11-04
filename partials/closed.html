@@ -10,13 +10,13 @@
             <p><input ng-model="search" class="form-control input-sm searchbox" type="search" placeholder="Search"></p>
             <p class="text-muted">Click row to view request. Click ID to approve, edit or mark complete. Click heading to sort.</p>
             	<!-- pager -->
-				<ul class="pagination pagination-sm">
+				<ul class="pagination">
                 	<li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
         			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
         			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
 				</ul>
                 <div class="table-responsive">
-                <table class="table table-hover table-condensed table-bordered">
+                <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
                             <th ng-click="sort('redlineId')">ID<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('redlineId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('redlineId')}"></i></th>
@@ -46,7 +46,7 @@
                 </table>
                 </div>
             	<!-- pager -->
-				<ul class="pagination pagination-sm">
+				<ul class="pagination">
                 	<li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
         			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
         			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>

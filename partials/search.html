@@ -18,7 +18,7 @@
                         <form class="form-inline" role="form" id="planSearch">
                             <div class="form-group">
                                 <label class="sr-only" for="inputPlan">Plan</label>
-                                <input ng-model="plansearch" type="text" class="form-control input-lg typeahead-plans" id="inputPlan" placeholder="Plan #">
+                                <input ng-model="plansearch" type="text" class="form-control input-lg" id="inputPlan" placeholder="Plan #">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="inputRevisionDate">Revision date</label>
@@ -28,13 +28,13 @@
                     </div>
                     <div id="searchresults" class="content">
                         <!-- pager -->
-                        <ul class="pagination pagination-sm">
+                        <ul class="pagination">
                             <li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
                             <li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
                             <li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
                         </ul>
                         <div class="table-responsive">
-                            <table class="table table-hover table-condensed">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th ng-click="sort('planName')">Plan #<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('planName'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('planName')}"></i></th>
@@ -52,7 +52,7 @@
                             </table>
                         </div><!-- /table-responsive -->
                         <!-- pager -->
-                        <ul class="pagination pagination-sm">
+                        <ul class="pagination">
                             <li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
                             <li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
                             <li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
