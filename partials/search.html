@@ -44,7 +44,7 @@
                                 </thead>
                                 <tbody ng-repeat="plan in filteredPlans = (plans.content.plans | filter:{planName:plansearch} | filter:{revision:planrevision} | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                                     <tr>
-                                        <td><a href="#" class="gotoForm">{{plan.planName}}</a></td>
+                                        <td>{{plan.planName}}</td>
                                         <td>{{plan.revision}}</td>
                                         <td class="del_td"><input type="checkbox"></td>
                                     </tr>
