@@ -51,8 +51,8 @@
         			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
         			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
 				</ul>
-                <p>Total: {{filteredRedlines.length}}</p>
+                <p><button type="button" class="btn btn-default">Total: <span class="badge">{{filteredRedlines.length}}</span></button></p>
             </div>
         </div><!-- /pending tab content -->
     </div>
-</div><!-- /#redlineTabs -->
+<!-- /#redlineTabs -->

@@ -114,7 +114,7 @@ controllers.inprogressController = function ($scope, redlinesFactory) {
 	};
 	
 	//pagination
-	$scope.pageSize = 5; // number of records to display in table
+	$scope.pageSize = 10; // number of records to display in table
 	$scope.pages = [];
 	$scope.$watch('filteredRedlines.length', function(filteredSize){
 		$scope.pages.length = 0;
@@ -186,7 +186,7 @@ controllers.pendingController = function ($scope, redlinesFactory) {
 	};
 	
 	//pagination
-	$scope.pageSize = 5; // number of records to display in table
+	$scope.pageSize = 10; // number of records to display in table
 	$scope.pages = [];
 	$scope.$watch('filteredRedlines.length', function(filteredSize){
 		$scope.pages.length = 0;
@@ -259,7 +259,7 @@ controllers.closedController = function ($scope, redlinesFactory) {
 	};
 	
 	//pagination
-	$scope.pageSize = 5; // number of records to display in table
+	$scope.pageSize = 10; // number of records to display in table
 	$scope.pages = [];
 	$scope.$watch('filteredRedlines.length', function(filteredSize){
 		$scope.pages.length = 0;
@@ -313,6 +313,24 @@ controllers.searchController = function ($scope, plansFactory) {
 	};
 	$scope.isSortDown = function (fieldName) {
 		return $scope.sortField === fieldName && $scope.reverse;
+	};
+	
+		//pagination
+	$scope.pageSize = 10; // number of records to display in table
+	$scope.pages = [];
+	$scope.$watch('filteredPlans.length', function(filteredSize){
+		$scope.pages.length = 0;
+		var noOfPages = Math.ceil(filteredSize / $scope.pageSize);
+		for (var i=0; i<noOfPages; i++) {
+			$scope.pages.push(i);
+		}
+	});
+	
+	$scope.pageNo = 0;
+	$scope.setActivePage = function (pageNo) {
+		if (pageNo >=0 && pageNo < $scope.pages.length) {
+			$scope.pageNo = pageNo;
+		}
 	};
 	
 };
