@@ -43,6 +43,23 @@ redlineApp.factory('redlinesFactory', function($http) {
 	return factory;
 });
 
+// get all the plans
+redlineApp.factory('plansFactory', function($http) {
+	var plans = {content:null};
+	$http.get('media/json/plans.json')
+		.success(function(data) {
+			plans.content = data;
+	})
+		.error(function(data) {
+			alert('could not get data');
+	});
+	var factory = {};
+	factory.getPlans = function() {
+		return plans;
+	};
+	return factory;
+});
+
 // create controllers
 var controllers = {};
 
@@ -264,7 +281,13 @@ controllers.closedController = function ($scope, redlinesFactory) {
 
 };
 
-controllers.searchController = function ($scope) {
+// search page controller
+controllers.searchController = function ($scope, plansFactory) {
+	$scope.plans = [];
+	init();
+	function init() {
+		$scope.plans = plansFactory.getPlans();
+	}
 	
 };
 

@@ -38,12 +38,6 @@ $(document).ready(function() {
 		$("#reason_window > div").removeClass("has-warning");
 	});
 	
-	// turn off request tab on init
-	if($('#requestTab').attr('data-toggle')) {
-		$('#requestTab').removeAttr("data-toggle");
-		$('#requestTab').css("cursor", "not-allowed");
-	}
-	
 	// tabs
 	$('#inputPlan a').click(function (e) {
 		e.preventDefault();
@@ -60,14 +54,6 @@ $(document).ready(function() {
 	
 	// instantiate validator
 	$("#planSearch").validationEngine();
-	
-	// show search results pane
-	$("#planSearch").submit(function(event) {
-		if($("#inputPlan").val()){ // if there is a value in the plan input
-			$("#search_results").show( "slow" );
-			return false;
-		}
-	});
 	
 	// link to request form tab
 	$('.gotoForm').click(function() {
@@ -87,17 +73,6 @@ $(document).ready(function() {
 			}); // get Json
 		};
 	}); // click fn
-	
-	// link to search tab
-	$('.gotoSearch').click(function() {
-		$('#wizardTabs a[href="#search"]').tab("show");
-		$('#requestTab').removeAttr("data-toggle");
-		$('#requestTab').css("cursor", "not-allowed");
-		$( "#search_results" ).hide();
-	});
-	
-	// logout tooltip
-	$('#logout').tooltip();
 	
 	// set inputRevisionDate to cursor:auto
 	$('#inputRevisionDate').css("cursor", "auto");

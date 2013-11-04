@@ -31,8 +31,8 @@ html, body {
 #btnSearch {
 	margin-bottom:0;
 }
-#search_results {
-	display:none;
+#searchresults {
+	margin-top:2em;
 }
 #tblResults a{
 	display:block;
@@ -40,6 +40,9 @@ html, body {
 .del_td {
 	text-align:center;
 	width:1em;
+}
+.searchbox {
+	margin-top:2em;
 }
 td > button.close {
 	float:none;
