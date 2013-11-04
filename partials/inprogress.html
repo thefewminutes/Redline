@@ -1,3 +1,5 @@
+<h1>Redline Web App</h1>
+<p><a href="#search" class="btn btn-primary btn-lg">New Redline</a></p>
 <div id="redlineTabs">
     <ul class="nav nav-tabs" id="pagetabs">
         <li class="active"><a href="#" data-toggle="tab">In Progress</a></li>
@@ -16,7 +18,7 @@
         			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
         			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
 				</ul>
-                <table id="tbl-inProgress" class="table table-hover table-condensed table-bordered">
+                <table class="table table-hover table-condensed table-bordered">
                     <thead>
                         <tr>
                             <th ng-click="sort('redlineId')">ID<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('redlineId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('redlineId')}"></i></th>

@@ -1,33 +1,43 @@
 {
 	"plans": [{
 		"planId": 1,
-		"planName": "1-20"
+		"planName": "1-20",
+		"revision": "02-03-2013"
 	}, {
 		"planId": 2,
-		"planName": "20-30"
+		"planName": "20-30",
+		"revision": null
 	}, {
 		"planId": 3,
-		"planName": "11-40"
+		"planName": "11-40",
+		"revision": "05-12-2013"
 	}, {
 		"planId": 4,
-		"planName": "19-30"
+		"planName": "19-30",
+		"revision": "06-02-2013"
 	}, {
 		"planId": 5,
-		"planName": "8-30"
+		"planName": "8-30",
+		"revision": "07-15-2013"
 	}, {
 		"planId": 6,
-		"planName": "6-40"
+		"planName": "6-40",
+		"revision": null
 	}, {
 		"planId": 7,
-		"planName": "25-40"
+		"planName": "25-40",
+		"revision": "01-23-2013"
 	}, {
 		"planId": 8,
-		"planName": "4-40"
+		"planName": "4-40",
+		"revision": "11-06-2013"
 	}, {
 		"planId": 9,
-		"planName": "33-30"
+		"planName": "33-30",
+		"revision": "12-29-2013"
 	}, {
 		"planId": 10,
-		"planName": "18-30"
+		"planName": "18-30",
+		"revision": null
 	}]
 }
