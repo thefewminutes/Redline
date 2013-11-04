@@ -12,7 +12,8 @@
     "request": "Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 2,
 	"userId": 2,
@@ -25,7 +26,8 @@
     "request": "Donec nec placerat tellus, at vestibulum velit. Pellentesque quis pretium turpis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 3,
 	"userId": 1,
@@ -38,7 +40,8 @@
     "request": "Aliquam vulputate nulla vitae justo accumsan, vitae vestibulum tellus pulvinar. Nunc adipiscing lorem metus, a ornare velit commodo sed. Vivamus porta facilisis dui, sed egestas nunc placerat nec.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 4,
 	"userId": 2,
@@ -51,7 +54,8 @@
     "request": "Donec arcu erat, gravida eu nunc non, posuere gravida magna.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 5,
 	"userId": 3,
@@ -64,7 +68,8 @@
     "request": "Suspendisse dapibus fermentum justo non fermentum. Quisque vel accumsan lacus, eu feugiat felis",
 	"costEstReq": "y",
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 6,
 	"userId": 1,
@@ -77,7 +82,8 @@
     "request": "Pellentesque rhoncus tellus sed neque pellentesque posuere. Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 7,
 	"userId": 1,
@@ -90,7 +96,8 @@
     "request": "Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 8,
 	"userId": 3,
@@ -103,7 +110,8 @@
     "request": "Donec nec pharetra urna. Nunc ultrices consectetur turpis, eget commodo dui dignissim non.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 9,
 	"userId": 2,
@@ -116,7 +124,8 @@
     "request": "Ut ornare enim et pulvinar dapibus. Sed ullamcorper magna eget lorem vehicula vulputate.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 10,
 	"userId": 1,
@@ -129,7 +138,8 @@
     "request": "Phasellus consectetur augue sed lorem semper consequat vitae sed nisi. Suspendisse potenti. Ut blandit fringilla lacinia. Proin vel elit quis risus vestibulum suscipit ut at turpis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 11,
 	"userId": 2,
@@ -142,7 +152,8 @@
     "request": "Proin metus massa, imperdiet sit amet est ut, consequat fermentum tellus. Vivamus eleifend purus vitae tortor bibendum sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac augue quis massa interdum tincidunt. Ut ac placerat sapien, et faucibus sapien.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 12,
 	"userId": 3,
@@ -155,7 +166,8 @@
     "request": "Phasellus lacus enim, sagittis eget fermentum quis, egestas nec dui.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 13,
 	"userId": 2,
@@ -168,7 +180,8 @@
     "request": "Sed sit amet eros nunc. Ut magna odio, laoreet a sollicitudin sit amet, dictum et leo. Duis porttitor eleifend velit, eget tincidunt urna dictum iaculis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 14,
 	"userId": 1,
@@ -181,7 +194,8 @@
     "request": "Cras vitae ante vel nisl lacinia mollis ac eu diam. Phasellus vestibulum quam ut ornare interdum. Integer vestibulum gravida est, vel semper lacus vehicula quis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 15,
 	"userId": 2,
@@ -194,7 +208,8 @@
     "request": "Cras fermentum lectus vitae arcu eleifend scelerisque. Fusce at iaculis sapien, tempor blandit leo.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 1
+	"status": 1,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 16,
 	"userId": 1,
@@ -207,7 +222,8 @@
     "request": "Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 17,
 	"userId": 2,
@@ -220,7 +236,8 @@
     "request": "Donec nec placerat tellus, at vestibulum velit. Pellentesque quis pretium turpis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 18,
 	"userId": 1,
@@ -233,7 +250,8 @@
     "request": "Aliquam vulputate nulla vitae justo accumsan, vitae vestibulum tellus pulvinar. Nunc adipiscing lorem metus, a ornare velit commodo sed. Vivamus porta facilisis dui, sed egestas nunc placerat nec.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 19,
 	"userId": 2,
@@ -246,7 +264,8 @@
     "request": "Donec arcu erat, gravida eu nunc non, posuere gravida magna.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 20,
 	"userId": 3,
@@ -259,7 +278,8 @@
     "request": "Suspendisse dapibus fermentum justo non fermentum. Quisque vel accumsan lacus, eu feugiat felis",
 	"costEstReq": "y",
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 21,
 	"userId": 1,
@@ -272,7 +292,8 @@
     "request": "Pellentesque rhoncus tellus sed neque pellentesque posuere. Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 22,
 	"userId": 1,
@@ -285,7 +306,8 @@
     "request": "Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 23,
 	"userId": 3,
@@ -298,7 +320,8 @@
     "request": "Donec nec pharetra urna. Nunc ultrices consectetur turpis, eget commodo dui dignissim non.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 24,
 	"userId": 2,
@@ -311,7 +334,8 @@
     "request": "Ut ornare enim et pulvinar dapibus. Sed ullamcorper magna eget lorem vehicula vulputate.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 25,
 	"userId": 1,
@@ -324,7 +348,8 @@
     "request": "Phasellus consectetur augue sed lorem semper consequat vitae sed nisi. Suspendisse potenti. Ut blandit fringilla lacinia. Proin vel elit quis risus vestibulum suscipit ut at turpis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 26,
 	"userId": 2,
@@ -337,7 +362,8 @@
     "request": "Proin metus massa, imperdiet sit amet est ut, consequat fermentum tellus. Vivamus eleifend purus vitae tortor bibendum sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac augue quis massa interdum tincidunt. Ut ac placerat sapien, et faucibus sapien.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 27,
 	"userId": 3,
@@ -350,7 +376,8 @@
     "request": "Phasellus lacus enim, sagittis eget fermentum quis, egestas nec dui.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 28,
 	"userId": 2,
@@ -363,7 +390,8 @@
     "request": "Sed sit amet eros nunc. Ut magna odio, laoreet a sollicitudin sit amet, dictum et leo. Duis porttitor eleifend velit, eget tincidunt urna dictum iaculis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 29,
 	"userId": 1,
@@ -376,7 +404,8 @@
     "request": "Cras vitae ante vel nisl lacinia mollis ac eu diam. Phasellus vestibulum quam ut ornare interdum. Integer vestibulum gravida est, vel semper lacus vehicula quis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 30,
 	"userId": 2,
@@ -389,7 +418,8 @@
     "request": "Cras fermentum lectus vitae arcu eleifend scelerisque. Fusce at iaculis sapien, tempor blandit leo.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 2
+	"status": 2,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 31,
 	"userId": 1,
@@ -402,7 +432,8 @@
     "request": "Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 32,
 	"userId": 2,
@@ -415,7 +446,8 @@
     "request": "Donec nec placerat tellus, at vestibulum velit. Pellentesque quis pretium turpis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
     "redlineId": 33,
 	"userId": 1,
@@ -428,7 +460,8 @@
     "request": "Aliquam vulputate nulla vitae justo accumsan, vitae vestibulum tellus pulvinar. Nunc adipiscing lorem metus, a ornare velit commodo sed. Vivamus porta facilisis dui, sed egestas nunc placerat nec.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 34,
 	"userId": 2,
@@ -441,7 +474,8 @@
     "request": "Donec arcu erat, gravida eu nunc non, posuere gravida magna.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 35,
 	"userId": 3,
@@ -454,7 +488,8 @@
     "request": "Suspendisse dapibus fermentum justo non fermentum. Quisque vel accumsan lacus, eu feugiat felis",
 	"costEstReq": "y",
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 36,
 	"userId": 1,
@@ -467,7 +502,8 @@
     "request": "Pellentesque rhoncus tellus sed neque pellentesque posuere. Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 37,
 	"userId": 1,
@@ -480,7 +516,8 @@
     "request": "Donec mattis metus id magna tincidunt, in fringilla ante interdum. Aenean tincidunt urna ultrices lacus dignissim ultricies.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 38,
 	"userId": 3,
@@ -493,7 +530,8 @@
     "request": "Donec nec pharetra urna. Nunc ultrices consectetur turpis, eget commodo dui dignissim non.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 39,
 	"userId": 2,
@@ -506,7 +544,8 @@
     "request": "Ut ornare enim et pulvinar dapibus. Sed ullamcorper magna eget lorem vehicula vulputate.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 40,
 	"userId": 1,
@@ -519,7 +558,8 @@
     "request": "Phasellus consectetur augue sed lorem semper consequat vitae sed nisi. Suspendisse potenti. Ut blandit fringilla lacinia. Proin vel elit quis risus vestibulum suscipit ut at turpis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 41,
 	"userId": 2,
@@ -532,7 +572,8 @@
     "request": "Proin metus massa, imperdiet sit amet est ut, consequat fermentum tellus. Vivamus eleifend purus vitae tortor bibendum sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac augue quis massa interdum tincidunt. Ut ac placerat sapien, et faucibus sapien.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 42,
 	"userId": 3,
@@ -545,7 +586,8 @@
     "request": "Phasellus lacus enim, sagittis eget fermentum quis, egestas nec dui.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 43,
 	"userId": 2,
@@ -558,7 +600,8 @@
     "request": "Sed sit amet eros nunc. Ut magna odio, laoreet a sollicitudin sit amet, dictum et leo. Duis porttitor eleifend velit, eget tincidunt urna dictum iaculis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 44,
 	"userId": 1,
@@ -571,7 +614,8 @@
     "request": "Cras vitae ante vel nisl lacinia mollis ac eu diam. Phasellus vestibulum quam ut ornare interdum. Integer vestibulum gravida est, vel semper lacus vehicula quis.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }, {
 	"redlineId": 45,
 	"userId": 2,
@@ -584,7 +628,8 @@
     "request": "Cras fermentum lectus vitae arcu eleifend scelerisque. Fusce at iaculis sapien, tempor blandit leo.",
 	"costEstReq": null,
 	"designApprReq": null,
-	"status": 3
+	"status": 3,
+	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
   }]
   
 }
