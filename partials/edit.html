@@ -1,6 +1,6 @@
                 <!-- request form -->
                 <div class="tab-pane" id="requestform">
-    		<h2>Plan #3-40.02</h2>
+    		<h2>Plan #{{redlines.plan}}</h2>
     		<h3>Revision 9-15-2013</h3>
     		<p class="text-muted">Submitted by: Loggedin User | <a href="#" class="gotoSearch">Search for another plan</a></p>
             <form role="form" id="redlineForm">
@@ -157,10 +157,10 @@
                 <!-- end admin section -->
                 <div class="row">
                     <div class="col-md-3">
-                        <button type="button" class="btn btn-primary btn-block">Submit</button>
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Submit</button>
                     </div>
                     <div class="col-md-3">
-                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Edit</button>
+                        <button type="button" class="btn btn-primary btn-block">Edit</button>
                     </div>
                     <div class="col-md-3">
                         <button type="button" disabled="disabled" class="btn btn-primary btn-block">Mark Complete</button>
