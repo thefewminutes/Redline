@@ -30,7 +30,7 @@
                     </thead>
                     <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:1} | filter:search | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                         <tr ng-class="getClass(redline)">
-                            <td><a class="btn-sm btn-primary" href="#">{{redline.redlineId}}</a></td>
+                            <td><a class="btn-sm btn-primary" href="#/edit/{{redline.redlineId}}">{{redline.redlineId}}</a></td>
                             <td>{{redline.plan}}</td>
                             <td>{{redline.elevation}}</td>
                             <td size="10">{{redline.revisionDate}}</td>

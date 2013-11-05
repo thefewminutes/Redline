@@ -27,6 +27,11 @@ redlineApp.config(function($routeProvider) {
 				controller: 'newredlineController',
 				templateUrl: 'partials/requestform.html'
 			})
+		.when('/edit/:redlineId',
+			{
+				controller: 'editController',
+				templateUrl: 'partials/edit.html'
+			})
 		.otherwise({ redirectTo: '/'});
 });
 //$locationProvider.html5Mode(true);
@@ -337,6 +342,11 @@ controllers.searchController = function ($scope, plansFactory) {
 
 // new redline controller
 controllers.newredlineController = function ($scope) {
+	
+};
+
+// edit redline controller
+controllers.editController = function ($scope, plansFactory) {
 	
 };
 
