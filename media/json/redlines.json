@@ -1,6 +1,6 @@
 {
 
-  "redlines" : [{
+  "redlines": [{
     "redlineId": 1,
 	"userId": 1,
 	"submitDate": "10-2-2013",
@@ -13,7 +13,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 2,
 	"userId": 2,
@@ -27,7 +32,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 3,
 	"userId": 1,
@@ -41,7 +51,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 4,
 	"userId": 2,
@@ -55,7 +70,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 5,
 	"userId": 3,
@@ -69,7 +89,12 @@
 	"costEstReq": "y",
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 6,
 	"userId": 1,
@@ -83,7 +108,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 7,
 	"userId": 1,
@@ -97,7 +127,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 8,
 	"userId": 3,
@@ -111,7 +146,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 9,
 	"userId": 2,
@@ -125,7 +165,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 10,
 	"userId": 1,
@@ -139,7 +184,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 11,
 	"userId": 2,
@@ -153,7 +203,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 12,
 	"userId": 3,
@@ -167,7 +222,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 13,
 	"userId": 2,
@@ -181,7 +241,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 14,
 	"userId": 1,
@@ -195,7 +260,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 15,
 	"userId": 2,
@@ -209,7 +279,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 16,
 	"userId": 1,
@@ -223,7 +298,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 17,
 	"userId": 2,
@@ -237,7 +317,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 18,
 	"userId": 1,
@@ -251,7 +336,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 19,
 	"userId": 2,
@@ -265,7 +355,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 20,
 	"userId": 3,
@@ -279,7 +374,12 @@
 	"costEstReq": "y",
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 21,
 	"userId": 1,
@@ -293,7 +393,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 22,
 	"userId": 1,
@@ -307,7 +412,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 23,
 	"userId": 3,
@@ -321,7 +431,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 24,
 	"userId": 2,
@@ -335,7 +450,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 25,
 	"userId": 1,
@@ -349,7 +469,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 26,
 	"userId": 2,
@@ -363,7 +488,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 27,
 	"userId": 3,
@@ -377,7 +507,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 28,
 	"userId": 2,
@@ -391,7 +526,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 29,
 	"userId": 1,
@@ -405,7 +545,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 30,
 	"userId": 2,
@@ -419,7 +564,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 2,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 31,
 	"userId": 1,
@@ -433,7 +583,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 32,
 	"userId": 2,
@@ -447,7 +602,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
     "redlineId": 33,
 	"userId": 1,
@@ -461,7 +621,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 34,
 	"userId": 2,
@@ -475,7 +640,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 35,
 	"userId": 3,
@@ -489,7 +659,12 @@
 	"costEstReq": "y",
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 36,
 	"userId": 1,
@@ -503,7 +678,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 37,
 	"userId": 1,
@@ -517,7 +697,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 38,
 	"userId": 3,
@@ -531,7 +716,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 39,
 	"userId": 2,
@@ -545,7 +735,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 40,
 	"userId": 1,
@@ -559,7 +754,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 41,
 	"userId": 2,
@@ -573,7 +773,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 42,
 	"userId": 3,
@@ -587,7 +792,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 43,
 	"userId": 2,
@@ -601,7 +811,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 44,
 	"userId": 1,
@@ -615,7 +830,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }, {
 	"redlineId": 45,
 	"userId": 2,
@@ -629,7 +849,12 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 3,
-	"files" : [ "file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg" ]
+	"files": [ 
+		{"filename":"file1.jpg"}, 
+		{"filename":"file2.jpg"},
+		{"filename":"file3.jpg"}, 
+		{"filename":"file4.jpg"} 
+	]
   }]
   
 }
