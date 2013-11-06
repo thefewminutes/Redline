@@ -1,6 +1,5 @@
-{
-
-  "redlines": [{
+[
+	{
     "redlineId": 1,
 	"userId": 1,
 	"submitDate": "10-2-2013",
@@ -856,5 +855,3 @@
 		{"filename":"file4.jpg"} 
 	]
   }]
-  
-}

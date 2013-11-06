@@ -353,6 +353,7 @@ controllers.newredlineController = function ($scope, plansFactory) {
 controllers.editController = function ($scope, $routeParams, redlinesFactory) {
 	$scope.redlines = redlinesFactory.getSingleRedline({redlineId:$routeParams.redlineId}); // passes {redlineId:5}
 	// $scope.redlines = redlinesFactory.getSingleRedline($routeParams.redlineId); // passes 5
+	//$scope.redlineId = $routeParams.redlineId;
 };
 
 redlineApp.controller(controllers);

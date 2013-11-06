@@ -28,7 +28,7 @@
                             <th class="del_td"><i class="glyphicon glyphicon-minus-sign">&nbsp;</i></th>
                         </tr>
                     </thead>
-                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content.redlines | filter:{status:3} | filter:search | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
+                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content | filter:{status:3} | filter:search | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                         <tr ng-class="getClass(redline)">
                             <td><a class="btn-sm btn-primary" href="#/edit/{{redline.redlineId}}">{{redline.redlineId}}</a></td>
                             <td>{{redline.plan}}</td>
