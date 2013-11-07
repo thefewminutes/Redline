@@ -104,7 +104,7 @@ td > button.close {
 	margin-bottom: .5em;
 }
 
-/* table row zebra classes */
+/* angular table row zebra classes */
 .light-gray {
 	background-color: #eaeaea;
 }
@@ -128,4 +128,17 @@ td > button.close {
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 20px solid #f00;
+}
+/* angular classes */
+.ng-pristine { /* form element has not been touched */
+	
+}
+.ng-dirty { /* form element has been touched */
+	border: solid black 1px;
+}
+.ng-valid.ng-dirty { /* form element has been touched and is valid */
+	border: solid green 1px; 
+} 
+.ng-invalid.ng-dirty { /* form element has been touched and is not valid */
+	border: solid red 3px;
 }
