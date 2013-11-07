@@ -2,7 +2,7 @@
                 <div class="tab-pane" id="requestform">
     		<h2>Plan #{{currentRedline.content.plan}}</h2>
     		<h3>Revision {{currentRedline.content.revisionDate}}</h3>
-    		<p class="text-muted">Submitted by: {{currentRedline.content.userId}}</p>
+    		<p class="text-muted">Submitted by: {{currentRedline.content.userId}} | <a href="#" class="gotoSearch">Search for another plan</a></p>
             <form role="form" id="redlineForm">
     			<div class="panel panel-default">
     				<div class="panel-heading">
@@ -12,20 +12,66 @@
                     	<div class="row">
             				<div class="col-md-4">
             					<div class="form-group">
-                                    <label for="elevation">Elevation</label>
-                                    <input id="elevation" type="text" class="form-control" ng-model="currentRedline.content.elevation" ng-minlength="1" ng-maxlength="10">
+                                    <label for="ElevationName">Elevation # or name</label>
+                                    <select class="form-control" id="ElevationName">
+                                    	<option>-select-</option>
+                                        <option>A</option>
+                                        <option>A3</option>
+                                        <option>A4</option>
+                                        <option>F</option>
+                                        <option>F2</option>
+                                        <option>F3</option>
+                                        <option>F4</option>
+                                        <option>H</option>
+                                        <option>H2</option>
+                                        <option>H3</option>
+                                        <option>H4</option>
+                                        <option>P2</option>
+                                        <option>S4</option>
+                                        <option>S5</option>
+                                        <option>S6</option>
+                                        <option>T</option>
+                                        <option>T3</option>
+                                        <option>T4</option>
+                                        <option>U3</option>
+                                        <option>U4</option>
+                                        <option>V</option>
+                                        <option>V4</option>
+                                        <option>W3</option>
+                                        <option>W4</option>
+                                        <option>XA</option>
+                                        <option>XA2</option>
+                                        <option>XA4</option>
+                                        <option>XB</option>
+                                        <option>XB3</option>
+                                        <option>XC</option>
+                                        <option>XC3</option>
+                                        <option>XC4</option>
+                                    </select>
                 				</div>
             				</div>
                         	<div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="plat">Plat</label>
-                                    <input id="plat" type="text" class="form-control" ng-model="currentRedline.content.plat" ng-minlength="1" ng-maxlength="10">
+                                    <label for="plat-dd">Plat</label>
+                                    <select class="form-control" id="plat-dd">
+                                    	<option>-select-</option>
+                                        <option>plat 1</option>
+                                        <option>plat 2</option>
+                                        <option>plat 3</option>
+                                        <option>plat 4</option>
+                                    </select>
                                 </div>
                         	</div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="lot">Lot #</label>
-                                    <input id="lot" type="text" class="form-control" ng-model="currentRedline.content.lot" ng-minlength="1" ng-maxlength="10">
+                                    <label for="lot-dd">Lot #</label>
+                                    <select class="form-control" id="lot-dd">
+                                    	<option>-select-</option>
+                                        <option>BRG-305</option>
+                                        <option>BRG-358</option>
+                                        <option>BRG-371</option>
+                                        <option>EDG-104</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +79,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="redline-desc">Description of correction</label>
-                                <textarea id="redline-desc" name="redline-desc" ng-model="currentRedline.content.request" class="form-control validate[required] text-input" data-prompt-position="topRight" rows="5" ng-minlength="1"></textarea>
+                                <textarea id="redline-desc" name="redline-desc" class="form-control validate[required] text-input" data-prompt-position="topRight" rows="5"></textarea>
                                 <span class="help-block">Please describe changes in detail.</span>
                             </div>
                         </div>
@@ -55,13 +101,8 @@
                             <div class="form-group">
 
                                 <label>Files on server</label>
-                                		<ul>
-                                			<li class="list-group-item" ng-repeat="file in currentRedline.content.files">
-                                        		<a href="#">{{file}}</a>
-                                            	<button type="button" class="close" aria-hidden="true">&times;</button>
-                                        	</li>
-                                		</ul>
-                                    	<p ng-hide="currentRedline.content.files" class="text-info">No files on server</p><!-- upload files -->
+                                <div id="uploadfiles">
+                                    	<p class="text-info">No files on server</p><!-- upload files -->
                                 </div>
                             </div>
                         </div>
@@ -80,22 +121,28 @@
                                 <h4>Department approval <abbr title="required">req'd</abbr> <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" ng-model="currentRedline.content.costEstReq"> Cost estimate required
+                                        <input type="checkbox"> Cost estimate required
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" ng-model="currentRedline.content.designApprReq"> Design approval required
+                                        <input type="checkbox"> Design approval required
                                     </label>
                                 </div>
                                 <p><code>This section should be programmatically hidden after approval</code></p>      
                             </div>
                             <div class="col-md-6">
                                 <h4>Set redline approval status <a href="#" rel="popover" id="approvalPopover" data-original-title="Redline approval status" data-content="Mark approved to move redline to in-progress. Reject to move to closed. Requestor is notified of status and reason by email when you submit the form"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
-                                <select class="form-control" ng-model="currentRedline.content.status">
-                                	<option value="1" ng-selected="currentRedline.content.status=='1'">Approved</option>
-                                    <option value="4" ng-selected="currentRedline.content.status=='4'">Rejected</option>
-                                </select>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Approved
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="cb_rejected" type="checkbox" class="check"> Rejected
+                                    </label>
+                                </div>
                                 <div id="reason_window">
                                     <div class="form-group has-warning">
                                         <label for="reason">Reason</label>

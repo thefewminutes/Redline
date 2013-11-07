@@ -1,6 +1,6 @@
 {
     "redlineId": 2,
-	"userId": 2,
+	"userId": "Mark",
 	"submitDate": "10-3-2013",
     "plan": "20-30",
 	"revisionDate": "1-15-2013",
@@ -11,5 +11,5 @@
 	"costEstReq": null,
 	"designApprReq": null,
 	"status": 1,
-	"files": ["file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg"]
+	"files": null
 }
