@@ -35,6 +35,7 @@ redlineApp.config(function($routeProvider) {
 		.otherwise({ redirectTo: '/'});
 });
 //$locationProvider.html5Mode(true);
+// used to remove hash from URL
 
 // get all the redlines
 redlineApp.factory('redlinesFactory', function($http) {
@@ -377,6 +378,11 @@ controllers.editController = function ($scope, redlinedetailFactory, $routeParam
 	 $scope.showError = function(ngModelController, error) {
 		 return ngModelController.$error[error];
 	 };
+	 
+	 // enable save button if the form is dirty and valid
+	 $scope.canSave = function() {
+		 return $scope.redlineForm.$dirty && $scope.redlineForm.$valid;
+	 }
 };
 
 redlineApp.controller(controllers);

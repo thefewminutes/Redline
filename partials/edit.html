@@ -122,11 +122,8 @@
                 </div><!-- /panel-container -->
                 <!-- end admin section -->
                 <div class="row">
-                    <div class="col-md-3">
-                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Submit</button>
-                    </div>
-                    <div class="col-md-3">
-                        <button type="button" class="btn btn-primary btn-block">Edit</button>
+                    <div class="col-md-6">
+                        <button ng-disabled="!canSave()" type="button" class="btn btn-primary btn-block">Save</button>
                     </div>
                     <div class="col-md-3">
                         <button type="button" disabled="disabled" class="btn btn-primary btn-block">Mark Complete</button>
