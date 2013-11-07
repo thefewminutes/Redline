@@ -1,0 +1,15 @@
+[{
+    "redlineId": 1,
+	"userId": 1,
+	"submitDate": "10-2-2013",
+    "plan": "1-20",
+	"revisionDate": "2-13-2013",
+    "elevation": "A",
+	"plat": "PHA",
+	"lot": "357",
+    "request": "Quisque id consectetur turpis, ac fermentum ipsum. Nunc aliquet ligula id nunc molestie facilisis. Nam sit amet eros quis leo congue tincidunt vel quis dolor. Nullam tristique sollicitudin dolor consectetur pharetra. Fusce quis tempor nisl. Ut rutrum lacus metus, eu imperdiet neque hendrerit vitae. Maecenas nec lacinia est, at rutrum enim.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 1,
+	"files": ["file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg"]
+}]

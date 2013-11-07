@@ -1,0 +1,15 @@
+[{
+    "redlineId": 4,
+	"userId": 2,
+	"submitDate": "10-18-2013",
+    "plan": "25-40",
+	"revisionDate": "7-11-2013",
+    "elevation": "F",
+	"plat": "PH1A",
+	"lot": "2",
+    "request": "Donec arcu erat, gravida eu nunc non, posuere gravida magna.",
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": 1,
+	"files": ["file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg"]
+}]

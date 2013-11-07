@@ -1,0 +1,15 @@
+[{
+    "redlineId": 5,
+	"userId": 3,
+	"submitDate": "10-19-2013",
+    "plan": "6-40",
+	"revisionDate": "8-12-2013",
+    "elevation": "A4",
+	"plat": "PHA",
+	"lot": "56",
+    "request": "Suspendisse dapibus fermentum justo non fermentum. Quisque vel accumsan lacus, eu feugiat felis",
+	"costEstReq": "y",
+	"designApprReq": null,
+	"status": 1,
+	"files": ["file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg"]
+}]
