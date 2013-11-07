@@ -1,39 +1,52 @@
-                <!-- request form -->
-                <div class="tab-pane" id="requestform">
-    		<h2>Plan #{{currentRedline.content.plan}}</h2>
-    		<h3>Revision {{currentRedline.content.revisionDate}}</h3>
+            <!-- request form -->
+            <div class="tab-pane" id="requestform">
+            <h2>Edit Redline</h2>
+    		<h3>Plan #{{currentRedline.content.plan}}</h3>
+    		<h4 ng-show="currentRedline.content.revisionDate">Revision {{currentRedline.content.revisionDate}}</h4>
     		<p class="text-muted">Submitted by: {{currentRedline.content.userId}}</p>
-            <form role="form" id="redlineForm">
+            <form role="form" name="redlineForm" id="redlineForm">
     			<div class="panel panel-default">
     				<div class="panel-heading">
-        				<h3 class="panel-title">Redline details</h3>
+        				<h5 class="panel-title">Redline details</h5>
         			</div>
                     <div class="panel-body">
                     	<div class="row">
             				<div class="col-md-4">
-            					<div class="form-group">
+            					<div class="form-group" ng-class="getCssClasses(redlineForm.elevation)">
                                     <label for="elevation">Elevation</label>
-                                    <input id="elevation" type="text" class="form-control" ng-model="currentRedline.content.elevation" ng-minlength="1" ng-maxlength="10" required>
+                                    <input id="elevation" name="elevation" type="text" class="form-control" ng-model="currentRedline.content.elevation" ng-minlength="1" ng-maxlength="10" required>
+                                    <span class="text-danger" ng-show="showError(redlineForm.elevation, 'required')">
+                                    	<p><strong>Elevation is required!</strong></p>
+                                    </span>
                 				</div>
             				</div>
                         	<div class="col-md-4">
                                 <div class="form-group">
                                     <label for="plat">Plat</label>
-                                    <input id="plat" type="text" class="form-control" ng-model="currentRedline.content.plat" ng-minlength="1" ng-maxlength="10" required>
+                                    <input id="plat" name="plat" type="text" class="form-control" ng-model="currentRedline.content.plat" ng-minlength="1" ng-maxlength="10" required>
+                                    <span class="text-danger" ng-show="showError(redlineForm.plat, 'required')">
+                                    	<p><strong>Plat is required!</strong></p>
+                                    </span>
                                 </div>
                         	</div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="lot">Lot #</label>
-                                    <input id="lot" type="text" class="form-control" ng-model="currentRedline.content.lot" ng-minlength="1" ng-maxlength="10" required>
+                                    <input id="lot" name="lot" type="text" class="form-control" ng-model="currentRedline.content.lot" ng-minlength="1" ng-maxlength="10" required>
+                                    <span class="text-danger" ng-show="showError(redlineForm.lot, 'required')">
+                                    	<p><strong>Lot is required!</strong></p>
+                                    </span>
                                 </div>
                             </div>
                         </div>
         			<div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="redline-desc">Description of correction</label>
-                                <textarea id="redline-desc" name="redline-desc" ng-model="currentRedline.content.request" class="form-control validate[required] text-input" data-prompt-position="topRight" rows="5" ng-minlength="1" required></textarea>
+                                <label for="redlinedesc">Description of correction</label>
+                                <textarea id="redlinedesc" name="redlinedesc" ng-model="currentRedline.content.request" class="form-control text-input" rows="5" ng-minlength="1" required></textarea>
+                                <span class="text-danger" ng-show="showError(redlineForm.redlinedesc, 'required')">
+                                    	<p><strong>Request is required!</strong></p>
+                                </span>
                                 <span class="help-block">Please describe changes in detail.</span>
                             </div>
                         </div>
@@ -43,9 +56,9 @@
                         <div class="col-md-3 hidden-xs hidden-sm">
                             <div class="form-group">
                                 <label for="lefile">Upload image</label>
-                                <input id="lefile" type="file">
+                                <input id="lefile" name="lefile" type="file">
                                 <div class="input-append">
-                                    <input id="photoCover" class="form-control" type="text">
+                                    <input id="photoCover" name="photoCover" class="form-control" type="text">
                                     <a class="btn btn-primary" onclick="$('input[id=lefile]').click();">Browse</a>
                                     <button type="button" class="btn btn-md btn-primary" disabled="disabled">Upload</button>
                                 </div>
@@ -72,7 +85,7 @@
                 <!-- begin admin section -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Administrators</h3>
+                        <h5 class="panel-title">Administrators</h5>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -80,19 +93,18 @@
                                 <h4>Department approval <abbr title="required">req'd</abbr> <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" ng-model="currentRedline.content.costEstReq"> Cost estimate required
+                                        <input name="costEstReq" type="checkbox" ng-model="currentRedline.content.costEstReq"> Cost estimate required
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" ng-model="currentRedline.content.designApprReq"> Design approval required
+                                        <input name="designApprReq" type="checkbox" ng-model="currentRedline.content.designApprReq"> Design approval required
                                     </label>
-                                </div>
-                                <p><code>This section should be programmatically hidden after approval</code></p>      
+                                </div>    
                             </div>
                             <div class="col-md-6">
                                 <h4>Set redline approval status <a href="#" rel="popover" id="approvalPopover" data-original-title="Redline approval status" data-content="Mark approved to move redline to in-progress. Reject to move to closed. Requestor is notified of status and reason by email when you submit the form"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
-                                <select class="form-control" ng-model="currentRedline.content.status">
+                                <select name="redlineStatus" class="form-control" ng-model="currentRedline.content.status">
                                 	<option value="0" ng-selected="currentRedline.content.status=='0'">Not Set</option>
                                 	<option value="1" ng-selected="currentRedline.content.status=='1'">Approved</option>
                                     <option value="4" ng-selected="currentRedline.content.status=='4'">Rejected</option>
@@ -100,7 +112,7 @@
                                 <div id="reason_window">
                                     <div class="form-group has-warning">
                                         <label for="reason">Reason</label>
-                                        <textarea rows="2" class="form-control" id="reason" required></textarea>
+                                        <textarea rows="2" class="form-control" id="reason" name="reason" required></textarea>
                                         <span class="help-block">Please enter the reason for rejection</span>
                                     </div> 
                                 </div>   

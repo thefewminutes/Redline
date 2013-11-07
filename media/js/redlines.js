@@ -364,7 +364,19 @@ controllers.newredlineController = function ($scope, plansFactory) {
 
 // edit redline controller
 controllers.editController = function ($scope, redlinedetailFactory, $routeParams) {
-	 $scope.currentRedline = redlinedetailFactory.getRedline($routeParams.redlineId); // passes url id to factory
+	// passes url id to factory
+	$scope.currentRedline = redlinedetailFactory.getRedline($routeParams.redlineId);
+	 
+	// shows form validation messages
+	$scope.getCssClasses = function(ngModelController) {
+		 return {
+			 error: ngModelController.$invalid && ngModelController.$dirty, 
+			 success: ngModelController.$valid && ngModelController.$dirty
+		 };
+	 };
+	 $scope.showError = function(ngModelController, error) {
+		 return ngModelController.$error[error];
+	 };
 };
 
 redlineApp.controller(controllers);
