@@ -1,4 +1,4 @@
-[{
+{
     "redlineId": 2,
 	"userId": 2,
 	"submitDate": "10-3-2013",
@@ -12,4 +12,4 @@
 	"designApprReq": null,
 	"status": 1,
 	"files": ["file1.jpg", "file2.jpg", "file3.jpg", "file4.jpg"]
-}]
+}

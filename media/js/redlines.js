@@ -50,13 +50,22 @@ redlineApp.factory('redlinesFactory', function($http) {
 	factory.getRedlines = function() {
 		return redlines;
 	};
-	factory.getSingleRedline = function(redlineId) {
-		console.log(redlineId);
-		return redlines[redlineId];
-		/*return {
-			redlineId: 5,
-			plan: "10-40"
-		}*/
+	return factory;
+});
+
+// get specific redline
+redlineApp.factory('redlinedetailFactory', function($http) {
+	var redline = {content:null};
+	var factory = {};
+	factory.getRedline = function(redlineId) {
+		$http.get('media/json/detail/' + redlineId + '.json')
+			.success(function(data) {
+				redline.content = data;
+		})
+			.error(function(data) {
+				alert('could not get data');
+		});
+		return redline;
 	};
 	return factory;
 });
@@ -354,16 +363,8 @@ controllers.newredlineController = function ($scope, plansFactory) {
 };
 
 // edit redline controller
-controllers.editController = function ($scope, redlinesFactory, $routeParams) {
-		//$scope.currentRedline = redlinesFactory.getSingleRedline({redlineId:$routeParams.redlineId}); // passes {redlineId:5}
-	 //$scope.currentRedline = redlinesFactory.getSingleRedline($routeParams.redlineId); // passes 5
-	 $scope.redlines = [];
-	 $scope.currentRedline = [];
-	init();
-	function init() {
-		$scope.redlines = redlinesFactory.getRedlines();
-		$scope.currentRedline = $scope.redlines;
-	}
+controllers.editController = function ($scope, redlinedetailFactory, $routeParams) {
+	 $scope.currentRedline = redlinedetailFactory.getRedline($routeParams.redlineId); // passes url id to factory
 };
 
 redlineApp.controller(controllers);
