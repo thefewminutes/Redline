@@ -1,4 +1,4 @@
-var redlineApp = angular.module('redlineApp', ['ngRoute']);
+var redlineApp = angular.module('redlineApp',['ui.bootstrap','ngRoute']);
 		
 redlineApp.config(function($routeProvider) {
 	$routeProvider
