@@ -41,6 +41,10 @@ html, body {
 	text-align:center;
 	width:1em;
 }
+.edit_td {
+	text-align:center;
+	width:8em;
+}
 .searchbox {
 	margin-top:2em;
 }

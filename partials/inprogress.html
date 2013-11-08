@@ -19,7 +19,7 @@
                 <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th ng-click="sort('redlineId')">ID<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('redlineId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('redlineId')}"></i></th>
+                            <th ng-click="sort('redlineId')">&nbsp;<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('redlineId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('redlineId')}"></i></th>
                             <th ng-click="sort('plan')">Plan<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('plan'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('plan')}"></i></th>
                             <th ng-click="sort('elevation')">Elevation<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('elevation'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('elevation')}"></i></th>
                             <th ng-click="sort('revisionDate')">Revision Date<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('revisionDate'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('revisionDate')}"></i></th>
@@ -28,9 +28,12 @@
                             <th class="del_td"><i class="glyphicon glyphicon-minus-sign">&nbsp;</i></th>
                         </tr>
                     </thead>
-                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content | filter:{status:1} | filter:search | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-click="selectRedline(redline)" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
+                    <tbody ng-repeat="redline in filteredRedlines = (redlines.content | filter:{status:1} | filter:search | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                         <tr ng-class="getClass(redline)">
-                            <td><a class="btn-sm btn-primary" href="#/edit/{{redline.redlineId}}">{{redline.redlineId}}</a></td>
+                            <td class="edit_td">
+                            	<a class="btn btn-primary glyphicon glyphicon-edit" href="#/edit/{{redline.redlineId}}"></a>
+                                <a class="btn btn-primary glyphicon glyphicon-eye-open" ng-click="selectRedline(redline)"></a>
+                            </td>
                             <td>{{redline.plan}}</td>
                             <td>{{redline.elevation}}</td>
                             <td size="10">{{redline.revisionDate}}</td>
