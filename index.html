@@ -10,6 +10,7 @@
     	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     	<link href="bootstrap/css/navbar.css" rel="stylesheet">
     	<link href="media/CSS/mainstyles.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery.js"></script>
     	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     	<!--[if lt IE 9]>
       	<script src="bootstrap/js/html5shiv.js"></script>
@@ -17,7 +18,7 @@
     	<![endif]-->
         <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
     	<script src="http://code.angularjs.org/1.2.0-rc.3/angular-route.min.js"></script>
-        <script src="media/js/ui-bootstrap-0.6.0.min.js"></script>
+        <script src="media/js/ui-bootstrap-tpls-0.6.0.min.js"></script>
         <script src="media/js/redlines.js"></script>
 	</head>
     
@@ -38,7 +39,7 @@
             			<li><a href="#">Dashboard</a></li>
                         <li><a href="#search">New Redline Request</a></li>
           			</ul>
-                    <p class="navbar-text pull-right">Signed in as <a href="index.html" id="logout" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="Click to logout" class="navbar-link">Logged In User</a></p>
+                    <p class="navbar-text pull-right">Signed in as <a href="index.html" id="logout" class="navbar-link" popover="Click to logout" popover-trigger="mouseenter" popover-placement="bottom">Logged In User</a></p>
         		</div>
 			</div>
             <h1>Redline Web App</h1>
@@ -51,7 +52,7 @@
 			<p>Copyright &copy;2013 MainVue Homes | Need help? <a href="tel:+14257096526">Call</a> or <a href="mailto:Tony.Chantharangsy@mainvuehomes.com">email</a> the Webmaster.</p>
 		</div>
 	</footer>
-    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/tooltip.js"></script>
 	</body>
 </html>

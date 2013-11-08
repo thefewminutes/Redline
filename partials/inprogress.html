@@ -5,7 +5,6 @@
         <li><a href="#pending" data-toggle="tab">Pending</a></li>
         <li><a href="#closed" data-toggle="tab">Closed</a></li>
     </ul>
-    <div>
         <div><!-- in progress tab content -->
             <p><input ng-model="search" class="form-control input-lg searchbox" type="search" placeholder="Search"></p>
                 <!-- pager -->
@@ -53,7 +52,5 @@
         		<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
             </ul>
             <p><button type="button" class="btn btn-default">Total: <span class="badge">{{filteredRedlines.length}}</span></button></p>
-            </div>
         </div><!-- /in progress tab content -->
-    </div>
-<!-- /#redlineTabs -->
+</div><!-- /#redlineTabs -->
