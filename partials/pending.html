@@ -7,8 +7,7 @@
     </ul>
     <div>
         <div id="pending"><!-- pending tab content -->
-            <p><input ng-model="search" class="form-control input-sm searchbox" type="search" placeholder="Search"></p>
-            <p class="text-muted">Click row to view request. Click ID to approve, edit or mark complete. Click heading to sort.</p>
+            <p><input ng-model="search" class="form-control input-lg searchbox" type="search" placeholder="Search"></p>
             	<!-- pager -->
 				<ul class="pagination">
                 	<li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
@@ -19,31 +18,30 @@
                 <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th ng-click="sort('redlineId')">&nbsp;<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('redlineId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('redlineId')}"></i></th>
+                            <th ng-click="sort('redlineId')">Controls<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('redlineId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('redlineId')}"></i></th>
                             <th ng-click="sort('plan')">Plan<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('plan'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('plan')}"></i></th>
                             <th ng-click="sort('elevation')">Elevation<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('elevation'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('elevation')}"></i></th>
                             <th ng-click="sort('revisionDate')">Revision Date<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('revisionDate'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('revisionDate')}"></i></th>
                             <th ng-click="sort('userId')">Submitted by<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('userId'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('userId')}"></i></th>
                             <th ng-click="sort('submitDate')">Submit Date<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('submitDate'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('submitDate')}"></i></th>
-                            <th class="del_td"><i class="glyphicon glyphicon-minus-sign">&nbsp;</i></th>
                         </tr>
                     </thead>
                     <tbody ng-repeat="redline in filteredRedlines = (redlines.content | filter:{status:2} | filter:search | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-switch on="isSelected(redline)" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                         <tr ng-class="getClass(redline)">
                             <td class="edit_td">
-                            	<a class="btn btn-primary glyphicon glyphicon-edit" href="#/edit/{{redline.redlineId}}"></a>
-                                <a class="btn btn-primary glyphicon glyphicon-eye-open" ng-click="selectRedline(redline)"></a>
+                            	<p><a class="btn btn-default glyphicon glyphicon-edit" href="#/edit/{{redline.redlineId}}"></a>
+                                <a class="btn btn-default glyphicon glyphicon-eye-open" ng-click="selectRedline(redline)"></a></p>
+                                <p><a class="btn btn-default glyphicon glyphicon-download" href="#"></a>
+                                <a class="btn btn-warning glyphicon glyphicon-remove" ng-click="deleteRedline(redline)"></a></p>
                             </td>
                             <td>{{redline.plan}}</td>
                             <td>{{redline.elevation}}</td>
                             <td size="10">{{redline.revisionDate}}</td>
                             <td>{{redline.userId}}</td>
                             <td>{{redline.submitDate}}</td>
-                            <td class="del_td"><button type="button" class="close" aria-hidden="true" ng-click="deleteRedline(redline)">&times;</button></td>
                         </tr>
                         <tr ng-switch-when="true">
-                        	<td class="danger" colspan="6">{{redline.request}}</td>
-                            <td class="del_td"><i class="glyphicon glyphicon-print"></i></td>
+                        	<td class="danger" colspan="7">{{redline.request}}</td>
                         </tr>
                     </tbody>
                 </table>
