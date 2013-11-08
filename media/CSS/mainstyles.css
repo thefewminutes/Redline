@@ -142,3 +142,6 @@ td > button.close {
 .ng-invalid.ng-dirty { /* form element has been touched and is not valid */
 	border: solid red 3px;
 }
+.nav, .pagination, .carousel a { /* required for angularUI bootstrap */
+	cursor: pointer; 
+}
