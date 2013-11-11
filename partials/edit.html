@@ -4,7 +4,7 @@
     		<h3>Plan #{{currentRedline.content.plan}}</h3>
     		<h4 ng-show="currentRedline.content.revisionDate">Revision {{currentRedline.content.revisionDate}}</h4>
     		<p class="text-muted">Submitted by: {{currentRedline.content.userId}}</p>
-            <form role="form" name="redlineForm" id="redlineForm">
+            <form role="form" name="redlineForm" id="redlineForm" novalidate>
     			<div class="panel panel-default">
     				<div class="panel-heading">
         				<h5 class="panel-title">Redline details</h5>
