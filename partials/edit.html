@@ -126,12 +126,12 @@
                         <button ng-disabled="!canSave()" type="button" class="btn btn-primary btn-block">Save</button>
                     </div>
                     <div class="col-md-3">
-                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Mark Complete</button>
+                        <button type="button" ng-click="revert()" ng-disabled="!canRevert()" class="btn btn-primary btn-block">Reset</button>
                     </div>
                     <div class="col-md-3">
-                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Delete</button>
+                        <button type="button" disabled="disabled" class="btn btn-primary btn-block">Mark Complete</button>
                     </div>
                 </div>
             </form>
-                </div>
-            </div><!-- /tab content -->
+                
+            <!-- /tab content -->

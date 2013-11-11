@@ -367,6 +367,7 @@ controllers.newredlineController = function ($scope, plansFactory) {
 controllers.editController = function ($scope, redlinedetailFactory, $routeParams) {
 	// passes url id to factory
 	$scope.currentRedline = redlinedetailFactory.getRedline($routeParams.redlineId);
+	console.log($scope.currentRedline);
 	 
 	// shows form validation messages
 	$scope.getCssClasses = function(ngModelController) {
@@ -382,7 +383,18 @@ controllers.editController = function ($scope, redlinedetailFactory, $routeParam
 	 // enable save button if the form is dirty and valid
 	 $scope.canSave = function() {
 		 return $scope.redlineForm.$dirty && $scope.redlineForm.$valid;
-	 }
+	 };
+	 
+	 // reset edit form
+	 var original = angular.copy($scope.currentRedline);
+	 //console.log(original);
+	 $scope.revert = function() {
+		 $scope.currentRedline = angular.copy(original);
+		 $scope.redlineForm.setPristine();
+	 };
+	 $scope.canRevert = function() {
+		 return !angular.equals($scope.currentRedline, original);
+	 };
 };
 
 redlineApp.controller(controllers);
