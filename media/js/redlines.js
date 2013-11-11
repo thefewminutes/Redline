@@ -30,7 +30,12 @@ redlineApp.config(function($routeProvider) {
 		.when('/edit/:redlineId',
 			{
 				controller: 'editController',
-				templateUrl: 'partials/edit.html'
+				templateUrl: 'partials/edit.html',
+				resolve: {
+					currentRedline: function($route, redlinedetailFactory) {
+						return redlinedetailFactory.getRedline($route.current.params.redlineId);
+					}
+				}
 			})
 		.otherwise({ redirectTo: '/'});
 });
@@ -64,6 +69,7 @@ redlineApp.factory('redlinedetailFactory', function($http) {
 				redline.content = data;
 		})
 			.error(function(data) {
+				redline = null;
 				alert('could not get data');
 		});
 		return redline;
@@ -364,10 +370,10 @@ controllers.newredlineController = function ($scope, plansFactory) {
 };
 
 // edit redline controller
-controllers.editController = function ($scope, redlinedetailFactory, $routeParams) {
-	// passes url id to factory
-	$scope.currentRedline = redlinedetailFactory.getRedline($routeParams.redlineId);
-	console.log($scope.currentRedline);
+controllers.editController = function ($scope, currentRedline) {
+	
+	// get the current redline
+	$scope.currentRedline = currentRedline;
 	 
 	// shows form validation messages
 	$scope.getCssClasses = function(ngModelController) {
