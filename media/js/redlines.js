@@ -69,7 +69,6 @@ redlineApp.factory('redlinedetailFactory', function($http) {
 				redline.content = data;
 		})
 			.error(function(data) {
-				redline = null;
 				alert('could not get data');
 		});
 		return redline;
@@ -243,7 +242,7 @@ controllers.pendingController = function ($scope, redlinesFactory) {
 };
 
 // closed tab controller
-controllers.closedController = function ($scope, redlinesFactory) {
+controllers.closedController = function ($scope, redlinesFactory, $modal) {
 	$scope.redlines = [];
 	init();
 	function init() {
@@ -305,14 +304,52 @@ controllers.closedController = function ($scope, redlinesFactory) {
 		}
 	};
 	
-	// delete redline
+/*	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.indexOf(item);
     	if (index != -1) {
         	$scope.redlines.content.splice(index, 1);
     	} 
+	}; */
+	// delete redline
+	$scope.deleteRedline = function (item) {
+		
+		// delete modal window
+		var deleteModal = $modal.open({
+			templateUrl: 'partials/deletemodal.html',
+			controller: controllers.deleteModalInstanceCtrl,
+			redlineToDelete: item
+		});
+		deleteModal.result.then(function () {
+			console.log('Modal dismissed at: ' + new Date());
+		});
+		
+		
+		
+		//var index = $scope.redlines.content.indexOf(item);
+    	//if (index != -1) {
+        	//$scope.redlines.content.splice(index, 1);
+    	//} 
 	};
 
+};
+
+controllers.deleteModalInstanceCtrl = function ($scope, $deleteModal, redlineToDelete) {
+
+  $scope.redlineToDelete = redlineToDelete;
+  console.log(redlineToDelete);
+
+  $scope.ok = function () {
+    $modalInstance.close();
+	//var index = $scope.redlines.content.indexOf(redlineToDelete);
+	//if (index != -1) {
+		//$scope.redlines.content.splice(index, 1);
+	//}
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
 };
 
 // search page controller
