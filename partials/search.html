@@ -37,16 +37,16 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
+                                    	<th class="del_td">&nbsp;</th>
                                         <th ng-click="sort('planName')">Plan #<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('planName'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('planName')}"></i></th>
                                         <th ng-click="sort('revision')">Revision Date<i ng-class="{'glyphicon glyphicon-chevron-up pull-right':isSortUp('revision'), 'glyphicon glyphicon-chevron-down pull-right':isSortDown('revision')}"></i></th>
-                                        <th class="del_td"><i class="glyphicon glyphicon-check">&nbsp;</i></th>
                                     </tr>
                                 </thead>
                                 <tbody ng-repeat="plan in filteredPlans = (plans.content.plans | filter:{planName:plansearch} | filter:{revision:planrevision} | orderBy:sortField:reverse) | pagination:pageNo:pageSize" ng-class-even="'light-gray'" ng-class-odd="'dark-gray'">
                                     <tr>
+                                    	<td class="del_td"><a href="#/create/{{plan.planId}}" class="btn btn-default">Select</a></td>
                                         <td>{{plan.planName}}</td>
                                         <td>{{plan.revision}}</td>
-                                        <td class="del_td"><input type="checkbox"></td>
                                     </tr>
                                 </tbody>
                             </table>

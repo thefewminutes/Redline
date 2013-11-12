@@ -90,7 +90,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>Department approval <abbr title="required">req'd</abbr> <a href="#" rel="popover" id="deptApprovalPopover" data-original-title="Department approval" data-content="Check the appropriate box if cost estimate or design approval is required. Department is notified by email when you submit the form, prompting them to approve/reject redline"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+                                <h4>Department approval required</h4>
                                 <div class="checkbox">
                                     <label>
                                         <input name="costEstReq" type="checkbox" ng-model="currentRedline.content.costEstReq"> Cost estimate required
@@ -103,7 +103,7 @@
                                 </div>    
                             </div>
                             <div class="col-md-6">
-                                <h4>Set redline approval status <a href="#" rel="popover" id="approvalPopover" data-original-title="Redline approval status" data-content="Mark approved to move redline to in-progress. Reject to move to closed. Requestor is notified of status and reason by email when you submit the form"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+                                <h4>Set redline approval status</h4>
                                 <select name="redlineStatus" class="form-control" ng-model="currentRedline.content.status">
                                 	<option value="0" ng-selected="currentRedline.content.status=='0'">Not Set</option>
                                 	<option value="1" ng-selected="currentRedline.content.status=='1'">Approved</option>

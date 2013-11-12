@@ -22,11 +22,6 @@ redlineApp.config(function($routeProvider) {
 				controller: 'searchController',
 				templateUrl: 'partials/search.html'
 			})
-		.when('/newredline',
-			{
-				controller: 'newredlineController',
-				templateUrl: 'partials/requestform.html'
-			})
 		.when('/edit/:redlineId',
 			{
 				controller: 'editController',
@@ -34,6 +29,16 @@ redlineApp.config(function($routeProvider) {
 				resolve: {
 					currentRedline: function($route, redlinedetailFactory) {
 						return redlinedetailFactory.getRedline($route.current.params.redlineId);
+					}
+				}
+			})
+		.when('/create/:redlineId',
+			{
+				controller: 'createController',
+				templateUrl: 'partials/create.html',
+				resolve: {
+					currentRedline: function($route, redlineCreateFactory) {
+						return redlineCreateFactory.getRedline($route.current.params.redlineId);
 					}
 				}
 			})
@@ -59,12 +64,29 @@ redlineApp.factory('redlinesFactory', function($http) {
 	return factory;
 });
 
-// get specific redline
+// get specific redline for edit page
 redlineApp.factory('redlinedetailFactory', function($http) {
 	var redline = {content:null};
 	var factory = {};
 	factory.getRedline = function(redlineId) {
 		$http.get('media/json/detail/' + redlineId + '.json')
+			.success(function(data) {
+				redline.content = data;
+		})
+			.error(function(data) {
+				alert('could not get data');
+		});
+		return redline;
+	};
+	return factory;
+});
+
+// get specific redline for create page
+redlineApp.factory('redlineCreateFactory', function($http) {
+	var redline = {content:null};
+	var factory = {};
+	factory.getRedline = function(redlineId) {
+		$http.get('media/json/plans/' + redlineId + '.json')
 			.success(function(data) {
 				redline.content = data;
 		})
@@ -304,52 +326,15 @@ controllers.closedController = function ($scope, redlinesFactory, $modal) {
 		}
 	};
 	
-/*	// delete redline
+	// delete redline
 	$scope.deleteRedline = function (item) {
 		var index = $scope.redlines.content.indexOf(item);
     	if (index != -1) {
         	$scope.redlines.content.splice(index, 1);
     	} 
-	}; */
-	// delete redline
-	$scope.deleteRedline = function (item) {
-		
-		// delete modal window
-		var deleteModal = $modal.open({
-			templateUrl: 'partials/deletemodal.html',
-			controller: controllers.deleteModalInstanceCtrl,
-			redlineToDelete: item
-		});
-		deleteModal.result.then(function () {
-			console.log('Modal dismissed at: ' + new Date());
-		});
-		
-		
-		
-		//var index = $scope.redlines.content.indexOf(item);
-    	//if (index != -1) {
-        	//$scope.redlines.content.splice(index, 1);
-    	//} 
 	};
+	
 
-};
-
-controllers.deleteModalInstanceCtrl = function ($scope, $deleteModal, redlineToDelete) {
-
-  $scope.redlineToDelete = redlineToDelete;
-  console.log(redlineToDelete);
-
-  $scope.ok = function () {
-    $modalInstance.close();
-	//var index = $scope.redlines.content.indexOf(redlineToDelete);
-	//if (index != -1) {
-		//$scope.redlines.content.splice(index, 1);
-	//}
-  };
-
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
 };
 
 // search page controller
@@ -430,6 +415,40 @@ controllers.editController = function ($scope, currentRedline) {
 	 
 	 // reset edit form
 	 var original = angular.copy($scope.currentRedline);
+	 //console.log(original);
+	 $scope.revert = function() {
+		 $scope.currentRedline = angular.copy(original);
+		 $scope.redlineForm.setPristine();
+	 };
+	 $scope.canRevert = function() {
+		 return !angular.equals($scope.currentRedline, original);
+	 };
+};
+
+// create redline controller
+controllers.createController = function ($scope, currentRedline) {
+	
+	// get the current redline
+	$scope.currentRedline = currentRedline;
+	 
+	// shows form validation messages
+	$scope.getCssClasses = function(ngModelController) {
+		 return {
+			 error: ngModelController.$invalid && ngModelController.$dirty, 
+			 success: ngModelController.$valid && ngModelController.$dirty
+		 };
+	 };
+	 $scope.showError = function(ngModelController, error) {
+		 return ngModelController.$error[error];
+	 };
+	 
+	 // enable save button if the form is dirty and valid
+	 $scope.canSave = function() {
+		 return $scope.redlineForm.$dirty && $scope.redlineForm.$valid;
+	 };
+	 
+	 // reset edit form
+	 var original = angular.copy($scope.currentPlan);
 	 //console.log(original);
 	 $scope.revert = function() {
 		 $scope.currentRedline = angular.copy(original);

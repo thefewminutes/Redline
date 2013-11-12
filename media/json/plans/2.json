@@ -1,0 +1,15 @@
+{
+    "redlineId": 2,
+	"userId": "current logged in user",
+	"submitDate": "current date",
+    "plan": "20-30",
+	"revisionDate": null,
+    "elevation": null,
+	"plat": null,
+	"lot": null,
+    "request": null,
+	"costEstReq": null,
+	"designApprReq": null,
+	"status": null,
+	"files": null
+}
