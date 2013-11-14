@@ -423,6 +423,14 @@ controllers.editController = function ($scope, currentRedline) {
 	 $scope.canRevert = function() {
 		 return !angular.equals($scope.currentRedline, original);
 	 };
+	 
+	 // delete
+	$scope.deleteFile = function (item) {
+		var index = $scope.currentRedline.content.files.indexOf(item);
+    	if (index != -1) {
+        	$scope.currentRedline.content.files.splice(index, 1);
+    	} 
+	};
 };
 
 // create redline controller

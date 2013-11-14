@@ -71,7 +71,7 @@
                                 		<ul class="list-group">
                                 			<li class="list-group-item" ng-repeat="file in currentRedline.content.files">
                                         		<a ng-href="/redline/media/images/uploads/{{file}}" target="_blank">{{file}}</a>
-                                            	<button type="button" class="close" aria-hidden="true">&times;</button>
+                                            	<button ng-click="deleteFile(file)" type="button" class="close" aria-hidden="true">&times;</button>
                                         	</li>
                                 		</ul>
                                     	<p ng-hide="currentRedline.content.files" class="text-info">No files on server</p><!-- upload files -->
