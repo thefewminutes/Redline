@@ -7,6 +7,7 @@
     </ul>
         <div id="closed"><!-- closed tab content -->
             <p><input ng-model="search" class="form-control input-lg searchbox" type="search" placeholder="Search"></p>
+            <div ng-show="filteredRedlines.length">
             	<!-- pager -->
 				<ul class="pagination">
                 	<li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
@@ -51,6 +52,10 @@
         			<li ng-repeat="page in pages" ng-class="{active: page == pageNo}"><a ng-click="setActivePage(page)">{{page+1}}</a></li>
         			<li ng-class="{disabled: pageNo == pages.length - 1}"><a ng-click="setActivePage(pageNo+1)">&raquo;</a></li>
 				</ul>
+                </div><!-- /ng-show -->
+                <div ng-show="!filteredRedlines.length">
+            		<p class="text-danger"><strong>No results</strong></p>
+            	</div>
                 <p><button type="button" class="btn btn-default">Total: <span class="badge">{{filteredRedlines.length}}</span></button></p>
             </div><!-- /closed tab content -->
         </div><!-- /#redlineTabs -->
