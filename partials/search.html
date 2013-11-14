@@ -26,7 +26,7 @@
                             </div>
                         </form>
                     </div>
-                    <div id="searchresults" class="content">
+                    <div id="searchresults" class="content" ng-show="filteredPlans.length">
                         <!-- pager -->
                         <ul class="pagination">
                             <li ng-class="{disabled: pageNo == 0}"><a ng-click="setActivePage(pageNo-1)">&laquo;</a></li>
@@ -59,6 +59,9 @@
                         </ul>
                         <p><button type="button" class="btn btn-default">Total: <span class="badge">{{filteredPlans.length}}</span></button></p>
                     </div><!-- /searchresults -->
+                    <div ng-show="!filteredPlans.length">
+                    <p class="text-danger"><strong>No Results</strong></p>
+                    </div>
                 </div>
 
         <!-- /container -->
